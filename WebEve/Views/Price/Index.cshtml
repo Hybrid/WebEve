@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WebEve.Models.Price>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Update", "Update")
+</p>
+<table>
+    <tr>
+        <th>
+            Item
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Sell
+        </th>
+        <th>
+            Buy
+        </th>
+        <th>
+            Solar System
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sell)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Buy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SolarSystem.Name)
+        </td>
+    </tr>
+}
+
+</table>

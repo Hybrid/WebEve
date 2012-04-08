@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EveDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EveDbModelStoreContainer">
+          <EntitySet Name="Items" EntityType="EveDbModel.Store.Items" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Prices" EntityType="EveDbModel.Store.Prices" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SolarSystems" EntityType="EveDbModel.Store.SolarSystems" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ItemPrice" Association="EveDbModel.Store.FK_ItemPrice">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Prices" EntitySet="Prices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SolarSystemPrice" Association="EveDbModel.Store.FK_SolarSystemPrice">
+            <End Role="SolarSystems" EntitySet="SolarSystems" />
+            <End Role="Prices" EntitySet="Prices" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ApiId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prices">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Sell" Type="float" Nullable="false" />
+          <Property Name="Buy" Type="float" Nullable="false" />
+          <Property Name="ItemId" Type="int" Nullable="false" />
+          <Property Name="SolarSystemId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SolarSystems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ApiId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ItemPrice">
+          <End Role="Items" Type="EveDbModel.Store.Items" Multiplicity="1" />
+          <End Role="Prices" Type="EveDbModel.Store.Prices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Prices">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SolarSystemPrice">
+          <End Role="SolarSystems" Type="EveDbModel.Store.SolarSystems" Multiplicity="1" />
+          <End Role="Prices" Type="EveDbModel.Store.Prices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SolarSystems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Prices">
+              <PropertyRef Name="SolarSystemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EveDbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="WebEveEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Items" EntityType="EveDbModel.Item" />
+          <EntitySet Name="Prices" EntityType="EveDbModel.Price" />
+          <EntitySet Name="SolarSystems" EntityType="EveDbModel.SolarSystem" />
+          <AssociationSet Name="FK_ItemPrice" Association="EveDbModel.FK_ItemPrice">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Prices" EntitySet="Prices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SolarSystemPrice" Association="EveDbModel.FK_SolarSystemPrice">
+            <End Role="SolarSystems" EntitySet="SolarSystems" />
+            <End Role="Prices" EntitySet="Prices" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApiId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Prices" Relationship="EveDbModel.FK_ItemPrice" FromRole="Items" ToRole="Prices" />
+        </EntityType>
+        <EntityType Name="Price">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="Sell" Type="Double" Nullable="false" />
+          <Property Name="Buy" Type="Double" Nullable="false" />
+          <Property Name="ItemId" Type="Int32" Nullable="false" />
+          <Property Name="SolarSystemId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Item" Relationship="EveDbModel.FK_ItemPrice" FromRole="Prices" ToRole="Items" />
+          <NavigationProperty Name="SolarSystem" Relationship="EveDbModel.FK_SolarSystemPrice" FromRole="Prices" ToRole="SolarSystems" />
+        </EntityType>
+        <EntityType Name="SolarSystem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApiId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Prices" Relationship="EveDbModel.FK_SolarSystemPrice" FromRole="SolarSystems" ToRole="Prices" />
+        </EntityType>
+        <Association Name="FK_ItemPrice">
+          <End Role="Items" Type="EveDbModel.Item" Multiplicity="1" />
+          <End Role="Prices" Type="EveDbModel.Price" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Prices">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SolarSystemPrice">
+          <End Role="SolarSystems" Type="EveDbModel.SolarSystem" Multiplicity="1" />
+          <End Role="Prices" Type="EveDbModel.Price" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SolarSystems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Prices">
+              <PropertyRef Name="SolarSystemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EveDbModelStoreContainer" CdmEntityContainer="WebEveEntities">
+          <EntitySetMapping Name="Items"><EntityTypeMapping TypeName="EveDbModel.Item"><MappingFragment StoreEntitySet="Items">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ApiId" ColumnName="ApiId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Prices"><EntityTypeMapping TypeName="EveDbModel.Price"><MappingFragment StoreEntitySet="Prices">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="Sell" ColumnName="Sell" />
+            <ScalarProperty Name="Buy" ColumnName="Buy" />
+            <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+            <ScalarProperty Name="SolarSystemId" ColumnName="SolarSystemId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SolarSystems"><EntityTypeMapping TypeName="EveDbModel.SolarSystem"><MappingFragment StoreEntitySet="SolarSystems">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ApiId" ColumnName="ApiId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="WebEve">
+        <EntityTypeShape EntityType="EveDbModel.Item" Width="1.5" PointX="0.75" PointY="1.375" Height="1.7879850260416668" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveDbModel.Price" Width="1.5" PointX="3" PointY="1" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveDbModel.SolarSystem" Width="1.5" PointX="6" PointY="1.125" Height="1.7879850260416674" IsExpanded="true" />
+        <AssociationConnector Association="EveDbModel.FK_ItemPrice" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.2689925130208333" />
+          <ConnectorPoint PointX="3" PointY="2.2689925130208333" />
+        </AssociationConnector>
+        <AssociationConnector Association="EveDbModel.FK_SolarSystemPrice" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="2.0189925130208337" />
+          <ConnectorPoint PointX="4.5" PointY="2.0189925130208337" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

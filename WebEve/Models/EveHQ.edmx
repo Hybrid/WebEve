@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EveHQDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EveHQDataModelStoreContainer">
+          <EntitySet Name="assetItemNames" EntityType="EveHQDataModel.Store.assetItemNames" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="customPrices" EntityType="EveHQDataModel.Store.customPrices" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="eveIDToName" EntityType="EveHQDataModel.Store.eveIDToName" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="eveMail" EntityType="EveHQDataModel.Store.eveMail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="eveNotifications" EntityType="EveHQDataModel.Store.eveNotifications" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="inventionResults" EntityType="EveHQDataModel.Store.inventionResults" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="marketPrices" EntityType="EveHQDataModel.Store.marketPrices" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="requisitions" EntityType="EveHQDataModel.Store.requisitions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="walletJournal" EntityType="EveHQDataModel.Store.walletJournal" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="walletTransactions" EntityType="EveHQDataModel.Store.walletTransactions" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="assetItemNames">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="bigint" Nullable="false" />
+          <Property Name="itemName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="customPrices">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="price" Type="float" />
+          <Property Name="priceDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="eveIDToName">
+          <Key>
+            <PropertyRef Name="eveID" />
+          </Key>
+          <Property Name="eveID" Type="bigint" Nullable="false" />
+          <Property Name="eveName" Type="nvarchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="eveMail">
+          <Key>
+            <PropertyRef Name="messageKey" />
+          </Key>
+          <Property Name="messageKey" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="messageID" Type="bigint" Nullable="false" />
+          <Property Name="originatorID" Type="bigint" Nullable="false" />
+          <Property Name="senderID" Type="bigint" Nullable="false" />
+          <Property Name="sentDate" Type="datetime" Nullable="false" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="toCorpOrAllianceID" Type="nvarchar" MaxLength="1000" />
+          <Property Name="toCharacterIDs" Type="nvarchar" MaxLength="1000" />
+          <Property Name="toListIDs" Type="nvarchar" MaxLength="1000" />
+          <Property Name="readMail" Type="bit" Nullable="false" />
+          <Property Name="messageBody" Type="ntext" />
+        </EntityType>
+        <EntityType Name="eveNotifications">
+          <Key>
+            <PropertyRef Name="messageKey" />
+          </Key>
+          <Property Name="messageKey" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="messageID" Type="bigint" Nullable="false" />
+          <Property Name="typeID" Type="bigint" Nullable="false" />
+          <Property Name="originatorID" Type="bigint" Nullable="false" />
+          <Property Name="senderID" Type="bigint" Nullable="false" />
+          <Property Name="sentDate" Type="datetime" Nullable="false" />
+          <Property Name="readMail" Type="bit" Nullable="false" />
+          <Property Name="messageBody" Type="ntext" />
+        </EntityType>
+        <EntityType Name="inventionResults">
+          <Key>
+            <PropertyRef Name="resultID" />
+          </Key>
+          <Property Name="resultID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="jobID" Type="bigint" />
+          <Property Name="resultDate" Type="datetime" />
+          <Property Name="BPID" Type="int" />
+          <Property Name="typeID" Type="int" />
+          <Property Name="typeName" Type="nvarchar" MaxLength="100" />
+          <Property Name="installerID" Type="bigint" />
+          <Property Name="installerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="result" Type="int" />
+        </EntityType>
+        <EntityType Name="marketPrices">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="price" Type="float" />
+          <Property Name="priceDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="requisitions">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="itemID" Type="int" Nullable="false" />
+          <Property Name="itemName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="itemQuantity" Type="int" Nullable="false" />
+          <Property Name="source" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="requestor" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="requestDate" Type="datetime" Nullable="false" />
+          <Property Name="requisition" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="walletJournal">
+          <Key>
+            <PropertyRef Name="transID" />
+          </Key>
+          <Property Name="transID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="transDate" Type="datetime" />
+          <Property Name="transRef" Type="bigint" />
+          <Property Name="transKey" Type="nvarchar" MaxLength="100" />
+          <Property Name="refTypeID" Type="int" />
+          <Property Name="ownerName1" Type="nvarchar" MaxLength="100" />
+          <Property Name="ownerID1" Type="bigint" />
+          <Property Name="ownerName2" Type="nvarchar" MaxLength="100" />
+          <Property Name="ownerID2" Type="bigint" />
+          <Property Name="argName1" Type="nvarchar" MaxLength="100" />
+          <Property Name="argID1" Type="bigint" />
+          <Property Name="amount" Type="float" />
+          <Property Name="balance" Type="float" />
+          <Property Name="reason" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxID" Type="bigint" />
+          <Property Name="taxAmount" Type="float" />
+          <Property Name="charID" Type="bigint" />
+          <Property Name="charName" Type="nvarchar" MaxLength="100" />
+          <Property Name="walletID" Type="int" />
+          <Property Name="importDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="walletTransactions">
+          <Key>
+            <PropertyRef Name="transID" />
+          </Key>
+          <Property Name="transID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="transDate" Type="datetime" />
+          <Property Name="transRef" Type="bigint" />
+          <Property Name="transKey" Type="nvarchar" MaxLength="100" />
+          <Property Name="quantity" Type="float" />
+          <Property Name="typeName" Type="nvarchar" MaxLength="100" />
+          <Property Name="typeID" Type="int" />
+          <Property Name="groupID" Type="int" />
+          <Property Name="categoryID" Type="int" />
+          <Property Name="marketgroupID" Type="int" />
+          <Property Name="price" Type="float" />
+          <Property Name="clientID" Type="bigint" />
+          <Property Name="clientName" Type="nvarchar" MaxLength="100" />
+          <Property Name="stationID" Type="bigint" />
+          <Property Name="stationName" Type="nvarchar" MaxLength="100" />
+          <Property Name="transType" Type="nvarchar" MaxLength="5" />
+          <Property Name="transFor" Type="nvarchar" MaxLength="15" />
+          <Property Name="systemID" Type="bigint" />
+          <Property Name="constID" Type="bigint" />
+          <Property Name="regionID" Type="bigint" />
+          <Property Name="charID" Type="bigint" />
+          <Property Name="charName" Type="nvarchar" MaxLength="100" />
+          <Property Name="walletID" Type="int" />
+          <Property Name="importDate" Type="datetime" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EveHQDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EveHQDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="assetItemNames" EntityType="EveHQDataModel.assetItemName" />
+          <EntitySet Name="customPrices" EntityType="EveHQDataModel.customPrice" />
+          <EntitySet Name="eveIDToNames" EntityType="EveHQDataModel.eveIDToName" />
+          <EntitySet Name="eveMails" EntityType="EveHQDataModel.eveMail" />
+          <EntitySet Name="eveNotifications" EntityType="EveHQDataModel.eveNotification" />
+          <EntitySet Name="inventionResults" EntityType="EveHQDataModel.inventionResult" />
+          <EntitySet Name="marketPrices" EntityType="EveHQDataModel.marketPrice" />
+          <EntitySet Name="requisitions" EntityType="EveHQDataModel.requisition" />
+          <EntitySet Name="walletJournals" EntityType="EveHQDataModel.walletJournal" />
+          <EntitySet Name="walletTransactions" EntityType="EveHQDataModel.walletTransaction" />
+        </EntityContainer>
+        <EntityType Name="assetItemName">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="Int64" Nullable="false" />
+          <Property Name="itemName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="customPrice">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Double" />
+          <Property Name="priceDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="eveIDToName">
+          <Key>
+            <PropertyRef Name="eveID" />
+          </Key>
+          <Property Name="eveID" Type="Int64" Nullable="false" />
+          <Property Name="eveName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="eveMail">
+          <Key>
+            <PropertyRef Name="messageKey" />
+          </Key>
+          <Property Name="messageKey" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="messageID" Type="Int64" Nullable="false" />
+          <Property Name="originatorID" Type="Int64" Nullable="false" />
+          <Property Name="senderID" Type="Int64" Nullable="false" />
+          <Property Name="sentDate" Type="DateTime" Nullable="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="toCorpOrAllianceID" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="toCharacterIDs" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="toListIDs" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="readMail" Type="Boolean" Nullable="false" />
+          <Property Name="messageBody" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="eveNotification">
+          <Key>
+            <PropertyRef Name="messageKey" />
+          </Key>
+          <Property Name="messageKey" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="messageID" Type="Int64" Nullable="false" />
+          <Property Name="typeID" Type="Int64" Nullable="false" />
+          <Property Name="originatorID" Type="Int64" Nullable="false" />
+          <Property Name="senderID" Type="Int64" Nullable="false" />
+          <Property Name="sentDate" Type="DateTime" Nullable="false" />
+          <Property Name="readMail" Type="Boolean" Nullable="false" />
+          <Property Name="messageBody" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="inventionResult">
+          <Key>
+            <PropertyRef Name="resultID" />
+          </Key>
+          <Property Name="resultID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="jobID" Type="Int64" />
+          <Property Name="resultDate" Type="DateTime" />
+          <Property Name="BPID" Type="Int32" />
+          <Property Name="typeID" Type="Int32" />
+          <Property Name="typeName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="installerID" Type="Int64" />
+          <Property Name="installerName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="result" Type="Int32" />
+        </EntityType>
+        <EntityType Name="marketPrice">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Double" />
+          <Property Name="priceDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="requisition">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="itemID" Type="Int32" Nullable="false" />
+          <Property Name="itemName" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="itemQuantity" Type="Int32" Nullable="false" />
+          <Property Name="source" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="requestor" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="requestDate" Type="DateTime" Nullable="false" />
+          <Property Name="requisition1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="walletJournal">
+          <Key>
+            <PropertyRef Name="transID" />
+          </Key>
+          <Property Name="transID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="transDate" Type="DateTime" />
+          <Property Name="transRef" Type="Int64" />
+          <Property Name="transKey" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="refTypeID" Type="Int32" />
+          <Property Name="ownerName1" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ownerID1" Type="Int64" />
+          <Property Name="ownerName2" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ownerID2" Type="Int64" />
+          <Property Name="argName1" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="argID1" Type="Int64" />
+          <Property Name="amount" Type="Double" />
+          <Property Name="balance" Type="Double" />
+          <Property Name="reason" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="taxID" Type="Int64" />
+          <Property Name="taxAmount" Type="Double" />
+          <Property Name="charID" Type="Int64" />
+          <Property Name="charName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="walletID" Type="Int32" />
+          <Property Name="importDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="walletTransaction">
+          <Key>
+            <PropertyRef Name="transID" />
+          </Key>
+          <Property Name="transID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="transDate" Type="DateTime" />
+          <Property Name="transRef" Type="Int64" />
+          <Property Name="transKey" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="quantity" Type="Double" />
+          <Property Name="typeName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="typeID" Type="Int32" />
+          <Property Name="groupID" Type="Int32" />
+          <Property Name="categoryID" Type="Int32" />
+          <Property Name="marketgroupID" Type="Int32" />
+          <Property Name="price" Type="Double" />
+          <Property Name="clientID" Type="Int64" />
+          <Property Name="clientName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="stationID" Type="Int64" />
+          <Property Name="stationName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="transType" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="transFor" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="systemID" Type="Int64" />
+          <Property Name="constID" Type="Int64" />
+          <Property Name="regionID" Type="Int64" />
+          <Property Name="charID" Type="Int64" />
+          <Property Name="charName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="walletID" Type="Int32" />
+          <Property Name="importDate" Type="DateTime" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EveHQDataModelStoreContainer" CdmEntityContainer="EveHQDataEntities">
+          <EntitySetMapping Name="assetItemNames"><EntityTypeMapping TypeName="EveHQDataModel.assetItemName"><MappingFragment StoreEntitySet="assetItemNames">
+            <ScalarProperty Name="itemID" ColumnName="itemID" />
+            <ScalarProperty Name="itemName" ColumnName="itemName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="customPrices"><EntityTypeMapping TypeName="EveHQDataModel.customPrice"><MappingFragment StoreEntitySet="customPrices">
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="price" ColumnName="price" />
+            <ScalarProperty Name="priceDate" ColumnName="priceDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="eveIDToNames"><EntityTypeMapping TypeName="EveHQDataModel.eveIDToName"><MappingFragment StoreEntitySet="eveIDToName">
+            <ScalarProperty Name="eveID" ColumnName="eveID" />
+            <ScalarProperty Name="eveName" ColumnName="eveName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="eveMails"><EntityTypeMapping TypeName="EveHQDataModel.eveMail"><MappingFragment StoreEntitySet="eveMail">
+            <ScalarProperty Name="messageKey" ColumnName="messageKey" />
+            <ScalarProperty Name="messageID" ColumnName="messageID" />
+            <ScalarProperty Name="originatorID" ColumnName="originatorID" />
+            <ScalarProperty Name="senderID" ColumnName="senderID" />
+            <ScalarProperty Name="sentDate" ColumnName="sentDate" />
+            <ScalarProperty Name="title" ColumnName="title" />
+            <ScalarProperty Name="toCorpOrAllianceID" ColumnName="toCorpOrAllianceID" />
+            <ScalarProperty Name="toCharacterIDs" ColumnName="toCharacterIDs" />
+            <ScalarProperty Name="toListIDs" ColumnName="toListIDs" />
+            <ScalarProperty Name="readMail" ColumnName="readMail" />
+            <ScalarProperty Name="messageBody" ColumnName="messageBody" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="eveNotifications"><EntityTypeMapping TypeName="EveHQDataModel.eveNotification"><MappingFragment StoreEntitySet="eveNotifications">
+            <ScalarProperty Name="messageKey" ColumnName="messageKey" />
+            <ScalarProperty Name="messageID" ColumnName="messageID" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="originatorID" ColumnName="originatorID" />
+            <ScalarProperty Name="senderID" ColumnName="senderID" />
+            <ScalarProperty Name="sentDate" ColumnName="sentDate" />
+            <ScalarProperty Name="readMail" ColumnName="readMail" />
+            <ScalarProperty Name="messageBody" ColumnName="messageBody" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="inventionResults"><EntityTypeMapping TypeName="EveHQDataModel.inventionResult"><MappingFragment StoreEntitySet="inventionResults">
+            <ScalarProperty Name="resultID" ColumnName="resultID" />
+            <ScalarProperty Name="jobID" ColumnName="jobID" />
+            <ScalarProperty Name="resultDate" ColumnName="resultDate" />
+            <ScalarProperty Name="BPID" ColumnName="BPID" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="typeName" ColumnName="typeName" />
+            <ScalarProperty Name="installerID" ColumnName="installerID" />
+            <ScalarProperty Name="installerName" ColumnName="installerName" />
+            <ScalarProperty Name="result" ColumnName="result" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="marketPrices"><EntityTypeMapping TypeName="EveHQDataModel.marketPrice"><MappingFragment StoreEntitySet="marketPrices">
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="price" ColumnName="price" />
+            <ScalarProperty Name="priceDate" ColumnName="priceDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="requisitions"><EntityTypeMapping TypeName="EveHQDataModel.requisition"><MappingFragment StoreEntitySet="requisitions">
+            <ScalarProperty Name="orderID" ColumnName="orderID" />
+            <ScalarProperty Name="itemID" ColumnName="itemID" />
+            <ScalarProperty Name="itemName" ColumnName="itemName" />
+            <ScalarProperty Name="itemQuantity" ColumnName="itemQuantity" />
+            <ScalarProperty Name="source" ColumnName="source" />
+            <ScalarProperty Name="requestor" ColumnName="requestor" />
+            <ScalarProperty Name="requestDate" ColumnName="requestDate" />
+            <ScalarProperty Name="requisition1" ColumnName="requisition" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="walletJournals"><EntityTypeMapping TypeName="EveHQDataModel.walletJournal"><MappingFragment StoreEntitySet="walletJournal">
+            <ScalarProperty Name="transID" ColumnName="transID" />
+            <ScalarProperty Name="transDate" ColumnName="transDate" />
+            <ScalarProperty Name="transRef" ColumnName="transRef" />
+            <ScalarProperty Name="transKey" ColumnName="transKey" />
+            <ScalarProperty Name="refTypeID" ColumnName="refTypeID" />
+            <ScalarProperty Name="ownerName1" ColumnName="ownerName1" />
+            <ScalarProperty Name="ownerID1" ColumnName="ownerID1" />
+            <ScalarProperty Name="ownerName2" ColumnName="ownerName2" />
+            <ScalarProperty Name="ownerID2" ColumnName="ownerID2" />
+            <ScalarProperty Name="argName1" ColumnName="argName1" />
+            <ScalarProperty Name="argID1" ColumnName="argID1" />
+            <ScalarProperty Name="amount" ColumnName="amount" />
+            <ScalarProperty Name="balance" ColumnName="balance" />
+            <ScalarProperty Name="reason" ColumnName="reason" />
+            <ScalarProperty Name="taxID" ColumnName="taxID" />
+            <ScalarProperty Name="taxAmount" ColumnName="taxAmount" />
+            <ScalarProperty Name="charID" ColumnName="charID" />
+            <ScalarProperty Name="charName" ColumnName="charName" />
+            <ScalarProperty Name="walletID" ColumnName="walletID" />
+            <ScalarProperty Name="importDate" ColumnName="importDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="walletTransactions"><EntityTypeMapping TypeName="EveHQDataModel.walletTransaction"><MappingFragment StoreEntitySet="walletTransactions">
+            <ScalarProperty Name="transID" ColumnName="transID" />
+            <ScalarProperty Name="transDate" ColumnName="transDate" />
+            <ScalarProperty Name="transRef" ColumnName="transRef" />
+            <ScalarProperty Name="transKey" ColumnName="transKey" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+            <ScalarProperty Name="typeName" ColumnName="typeName" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="groupID" ColumnName="groupID" />
+            <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+            <ScalarProperty Name="marketgroupID" ColumnName="marketgroupID" />
+            <ScalarProperty Name="price" ColumnName="price" />
+            <ScalarProperty Name="clientID" ColumnName="clientID" />
+            <ScalarProperty Name="clientName" ColumnName="clientName" />
+            <ScalarProperty Name="stationID" ColumnName="stationID" />
+            <ScalarProperty Name="stationName" ColumnName="stationName" />
+            <ScalarProperty Name="transType" ColumnName="transType" />
+            <ScalarProperty Name="transFor" ColumnName="transFor" />
+            <ScalarProperty Name="systemID" ColumnName="systemID" />
+            <ScalarProperty Name="constID" ColumnName="constID" />
+            <ScalarProperty Name="regionID" ColumnName="regionID" />
+            <ScalarProperty Name="charID" ColumnName="charID" />
+            <ScalarProperty Name="charName" ColumnName="charName" />
+            <ScalarProperty Name="walletID" ColumnName="walletID" />
+            <ScalarProperty Name="importDate" ColumnName="importDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="EveHQ">
+        <EntityTypeShape EntityType="EveHQDataModel.assetItemName" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4033821614583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveHQDataModel.customPrice" Width="1.5" PointX="2.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveHQDataModel.eveIDToName" Width="1.5" PointX="0.75" PointY="3.75" Height="1.4033821614583322" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveHQDataModel.eveMail" Width="1.5" PointX="2.75" PointY="3.75" Height="3.1340950520833335" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveHQDataModel.eveNotification" Width="1.5" PointX="4.75" PointY="0.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveHQDataModel.inventionResult" Width="1.5" PointX="4.75" PointY="4.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveHQDataModel.marketPrice" Width="1.5" PointX="6.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveHQDataModel.requisition" Width="1.5" PointX="6.75" PointY="3.75" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveHQDataModel.walletJournal" Width="1.5" PointX="0.75" PointY="7.75" Height="4.8648079427083353" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveHQDataModel.walletTransaction" Width="1.5" PointX="6.75" PointY="7.75" Height="5.6340136718750031" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

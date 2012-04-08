@@ -1,0 +1,2950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EveOnlineDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EveOnlineDBModelStoreContainer">
+          <EntitySet Name="agtAgents" EntityType="EveOnlineDBModel.Store.agtAgents" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="agtAgentTypes" EntityType="EveOnlineDBModel.Store.agtAgentTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="agtResearchAgents" EntityType="EveOnlineDBModel.Store.agtResearchAgents" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="chrAncestries" EntityType="EveOnlineDBModel.Store.chrAncestries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="chrAttributes" EntityType="EveOnlineDBModel.Store.chrAttributes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="chrBloodlines" EntityType="EveOnlineDBModel.Store.chrBloodlines" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="chrFactions" EntityType="EveOnlineDBModel.Store.chrFactions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="chrRaces" EntityType="EveOnlineDBModel.Store.chrRaces" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crpActivities" EntityType="EveOnlineDBModel.Store.crpActivities" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crpNPCCorporationDivisions" EntityType="EveOnlineDBModel.Store.crpNPCCorporationDivisions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crpNPCCorporationResearchFields" EntityType="EveOnlineDBModel.Store.crpNPCCorporationResearchFields" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crpNPCCorporations" EntityType="EveOnlineDBModel.Store.crpNPCCorporations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crpNPCCorporationTrades" EntityType="EveOnlineDBModel.Store.crpNPCCorporationTrades" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crpNPCDivisions" EntityType="EveOnlineDBModel.Store.crpNPCDivisions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crtCategories" EntityType="EveOnlineDBModel.Store.crtCategories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crtCertificates" EntityType="EveOnlineDBModel.Store.crtCertificates" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crtClasses" EntityType="EveOnlineDBModel.Store.crtClasses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crtRecommendations" EntityType="EveOnlineDBModel.Store.crtRecommendations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="crtRelationships" EntityType="EveOnlineDBModel.Store.crtRelationships" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="dgmAttributeCategories" EntityType="EveOnlineDBModel.Store.dgmAttributeCategories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="dgmAttributeTypes" EntityType="EveOnlineDBModel.Store.dgmAttributeTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="dgmEffects" EntityType="EveOnlineDBModel.Store.dgmEffects" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="dgmTypeAttributes" EntityType="EveOnlineDBModel.Store.dgmTypeAttributes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="dgmTypeEffects" EntityType="EveOnlineDBModel.Store.dgmTypeEffects" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="eveGraphics" EntityType="EveOnlineDBModel.Store.eveGraphics" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="eveIcons" EntityType="EveOnlineDBModel.Store.eveIcons" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="eveUnits" EntityType="EveOnlineDBModel.Store.eveUnits" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invBlueprintTypes" EntityType="EveOnlineDBModel.Store.invBlueprintTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invCategories" EntityType="EveOnlineDBModel.Store.invCategories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invContrabandTypes" EntityType="EveOnlineDBModel.Store.invContrabandTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invControlTowerResourcePurposes" EntityType="EveOnlineDBModel.Store.invControlTowerResourcePurposes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invControlTowerResources" EntityType="EveOnlineDBModel.Store.invControlTowerResources" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invFlags" EntityType="EveOnlineDBModel.Store.invFlags" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invGroups" EntityType="EveOnlineDBModel.Store.invGroups" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invItems" EntityType="EveOnlineDBModel.Store.invItems" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invMarketGroups" EntityType="EveOnlineDBModel.Store.invMarketGroups" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invMetaGroups" EntityType="EveOnlineDBModel.Store.invMetaGroups" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invMetaTypes" EntityType="EveOnlineDBModel.Store.invMetaTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invNames" EntityType="EveOnlineDBModel.Store.invNames" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invPositions" EntityType="EveOnlineDBModel.Store.invPositions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invTypeMaterials" EntityType="EveOnlineDBModel.Store.invTypeMaterials" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invTypeReactions" EntityType="EveOnlineDBModel.Store.invTypeReactions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invTypes" EntityType="EveOnlineDBModel.Store.invTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="invUniqueNames" EntityType="EveOnlineDBModel.Store.invUniqueNames" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapCelestialStatistics" EntityType="EveOnlineDBModel.Store.mapCelestialStatistics" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapConstellationJumps" EntityType="EveOnlineDBModel.Store.mapConstellationJumps" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapConstellations" EntityType="EveOnlineDBModel.Store.mapConstellations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapDenormalize" EntityType="EveOnlineDBModel.Store.mapDenormalize" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapJumps" EntityType="EveOnlineDBModel.Store.mapJumps" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapLandmarks" EntityType="EveOnlineDBModel.Store.mapLandmarks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapLocationScenes" EntityType="EveOnlineDBModel.Store.mapLocationScenes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapLocationWormholeClasses" EntityType="EveOnlineDBModel.Store.mapLocationWormholeClasses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapRegionJumps" EntityType="EveOnlineDBModel.Store.mapRegionJumps" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapRegions" EntityType="EveOnlineDBModel.Store.mapRegions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapSolarSystemJumps" EntityType="EveOnlineDBModel.Store.mapSolarSystemJumps" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapSolarSystems" EntityType="EveOnlineDBModel.Store.mapSolarSystems" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mapUniverse" EntityType="EveOnlineDBModel.Store.mapUniverse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="planetSchematics" EntityType="EveOnlineDBModel.Store.planetSchematics" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="planetSchematicsPinMap" EntityType="EveOnlineDBModel.Store.planetSchematicsPinMap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="planetSchematicsTypeMap" EntityType="EveOnlineDBModel.Store.planetSchematicsTypeMap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ramActivities" EntityType="EveOnlineDBModel.Store.ramActivities" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ramAssemblyLines" EntityType="EveOnlineDBModel.Store.ramAssemblyLines" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ramAssemblyLineStations" EntityType="EveOnlineDBModel.Store.ramAssemblyLineStations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ramAssemblyLineTypeDetailPerCategory" EntityType="EveOnlineDBModel.Store.ramAssemblyLineTypeDetailPerCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ramAssemblyLineTypeDetailPerGroup" EntityType="EveOnlineDBModel.Store.ramAssemblyLineTypeDetailPerGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ramAssemblyLineTypes" EntityType="EveOnlineDBModel.Store.ramAssemblyLineTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ramInstallationTypeContents" EntityType="EveOnlineDBModel.Store.ramInstallationTypeContents" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ramTypeRequirements" EntityType="EveOnlineDBModel.Store.ramTypeRequirements" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="staOperations" EntityType="EveOnlineDBModel.Store.staOperations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="staOperationServices" EntityType="EveOnlineDBModel.Store.staOperationServices" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="staServices" EntityType="EveOnlineDBModel.Store.staServices" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="staStations" EntityType="EveOnlineDBModel.Store.staStations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="staStationTypes" EntityType="EveOnlineDBModel.Store.staStationTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="translationTables" EntityType="EveOnlineDBModel.Store.translationTables" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="trnTranslationColumns" EntityType="EveOnlineDBModel.Store.trnTranslationColumns" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="trnTranslationLanguages" EntityType="EveOnlineDBModel.Store.trnTranslationLanguages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="trnTranslations" EntityType="EveOnlineDBModel.Store.trnTranslations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="warCombatZones" EntityType="EveOnlineDBModel.Store.warCombatZones" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="warCombatZoneSystems" EntityType="EveOnlineDBModel.Store.warCombatZoneSystems" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="agtAgents">
+          <Key>
+            <PropertyRef Name="agentID" />
+          </Key>
+          <Property Name="agentID" Type="int" Nullable="false" />
+          <Property Name="divisionID" Type="tinyint" />
+          <Property Name="corporationID" Type="int" />
+          <Property Name="locationID" Type="int" />
+          <Property Name="level" Type="tinyint" />
+          <Property Name="quality" Type="smallint" />
+          <Property Name="agentTypeID" Type="int" />
+          <Property Name="isLocator" Type="bit" />
+        </EntityType>
+        <EntityType Name="agtAgentTypes">
+          <Key>
+            <PropertyRef Name="agentTypeID" />
+          </Key>
+          <Property Name="agentTypeID" Type="int" Nullable="false" />
+          <Property Name="agentType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="agtResearchAgents">
+          <Key>
+            <PropertyRef Name="agentID" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="agentID" Type="int" Nullable="false" />
+          <Property Name="typeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="chrAncestries">
+          <Key>
+            <PropertyRef Name="ancestryID" />
+          </Key>
+          <Property Name="ancestryID" Type="tinyint" Nullable="false" />
+          <Property Name="ancestryName" Type="nvarchar" MaxLength="100" />
+          <Property Name="bloodlineID" Type="tinyint" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="perception" Type="tinyint" />
+          <Property Name="willpower" Type="tinyint" />
+          <Property Name="charisma" Type="tinyint" />
+          <Property Name="memory" Type="tinyint" />
+          <Property Name="intelligence" Type="tinyint" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="shortDescription" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="chrAttributes">
+          <Key>
+            <PropertyRef Name="attributeID" />
+          </Key>
+          <Property Name="attributeID" Type="tinyint" Nullable="false" />
+          <Property Name="attributeName" Type="varchar" MaxLength="100" />
+          <Property Name="description" Type="varchar" MaxLength="1000" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="shortDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="notes" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="chrBloodlines">
+          <Key>
+            <PropertyRef Name="bloodlineID" />
+          </Key>
+          <Property Name="bloodlineID" Type="tinyint" Nullable="false" />
+          <Property Name="bloodlineName" Type="nvarchar" MaxLength="100" />
+          <Property Name="raceID" Type="tinyint" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="maleDescription" Type="nvarchar" MaxLength="1000" />
+          <Property Name="femaleDescription" Type="nvarchar" MaxLength="1000" />
+          <Property Name="shipTypeID" Type="int" />
+          <Property Name="corporationID" Type="int" />
+          <Property Name="perception" Type="tinyint" />
+          <Property Name="willpower" Type="tinyint" />
+          <Property Name="charisma" Type="tinyint" />
+          <Property Name="memory" Type="tinyint" />
+          <Property Name="intelligence" Type="tinyint" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="shortDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="shortMaleDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="shortFemaleDescription" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="chrFactions">
+          <Key>
+            <PropertyRef Name="factionID" />
+          </Key>
+          <Property Name="factionID" Type="int" Nullable="false" />
+          <Property Name="factionName" Type="varchar" MaxLength="100" />
+          <Property Name="description" Type="varchar" MaxLength="1000" />
+          <Property Name="raceIDs" Type="int" />
+          <Property Name="solarSystemID" Type="int" />
+          <Property Name="corporationID" Type="int" />
+          <Property Name="sizeFactor" Type="float" />
+          <Property Name="stationCount" Type="smallint" />
+          <Property Name="stationSystemCount" Type="smallint" />
+          <Property Name="militiaCorporationID" Type="int" />
+          <Property Name="iconID" Type="int" />
+        </EntityType>
+        <EntityType Name="chrRaces">
+          <Key>
+            <PropertyRef Name="raceID" />
+          </Key>
+          <Property Name="raceID" Type="tinyint" Nullable="false" />
+          <Property Name="raceName" Type="varchar" MaxLength="100" />
+          <Property Name="description" Type="varchar" MaxLength="1000" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="shortDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="crpActivities">
+          <Key>
+            <PropertyRef Name="activityID" />
+          </Key>
+          <Property Name="activityID" Type="tinyint" Nullable="false" />
+          <Property Name="activityName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="crpNPCCorporationDivisions">
+          <Key>
+            <PropertyRef Name="corporationID" />
+            <PropertyRef Name="divisionID" />
+          </Key>
+          <Property Name="corporationID" Type="int" Nullable="false" />
+          <Property Name="divisionID" Type="tinyint" Nullable="false" />
+          <Property Name="size" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="crpNPCCorporationResearchFields">
+          <Key>
+            <PropertyRef Name="skillID" />
+            <PropertyRef Name="corporationID" />
+          </Key>
+          <Property Name="skillID" Type="int" Nullable="false" />
+          <Property Name="corporationID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="crpNPCCorporations">
+          <Key>
+            <PropertyRef Name="corporationID" />
+          </Key>
+          <Property Name="corporationID" Type="int" Nullable="false" />
+          <Property Name="size" Type="char" MaxLength="1" />
+          <Property Name="extent" Type="char" MaxLength="1" />
+          <Property Name="solarSystemID" Type="int" />
+          <Property Name="investorID1" Type="int" />
+          <Property Name="investorShares1" Type="tinyint" />
+          <Property Name="investorID2" Type="int" />
+          <Property Name="investorShares2" Type="tinyint" />
+          <Property Name="investorID3" Type="int" />
+          <Property Name="investorShares3" Type="tinyint" />
+          <Property Name="investorID4" Type="int" />
+          <Property Name="investorShares4" Type="tinyint" />
+          <Property Name="friendID" Type="int" />
+          <Property Name="enemyID" Type="int" />
+          <Property Name="publicShares" Type="bigint" />
+          <Property Name="initialPrice" Type="int" />
+          <Property Name="minSecurity" Type="float" />
+          <Property Name="scattered" Type="bit" />
+          <Property Name="fringe" Type="tinyint" />
+          <Property Name="corridor" Type="tinyint" />
+          <Property Name="hub" Type="tinyint" />
+          <Property Name="border" Type="tinyint" />
+          <Property Name="factionID" Type="int" />
+          <Property Name="sizeFactor" Type="float" />
+          <Property Name="stationCount" Type="smallint" />
+          <Property Name="stationSystemCount" Type="smallint" />
+          <Property Name="description" Type="nvarchar" />
+          <Property Name="iconID" Type="int" />
+        </EntityType>
+        <EntityType Name="crpNPCCorporationTrades">
+          <Key>
+            <PropertyRef Name="corporationID" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="corporationID" Type="int" Nullable="false" />
+          <Property Name="typeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="crpNPCDivisions">
+          <Key>
+            <PropertyRef Name="divisionID" />
+          </Key>
+          <Property Name="divisionID" Type="tinyint" Nullable="false" />
+          <Property Name="divisionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="leaderType" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="crtCategories">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="tinyint" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="500" />
+          <Property Name="categoryName" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="crtCertificates">
+          <Key>
+            <PropertyRef Name="certificateID" />
+          </Key>
+          <Property Name="certificateID" Type="int" Nullable="false" />
+          <Property Name="categoryID" Type="tinyint" />
+          <Property Name="classID" Type="int" />
+          <Property Name="grade" Type="tinyint" />
+          <Property Name="corpID" Type="int" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="description" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="crtClasses">
+          <Key>
+            <PropertyRef Name="classID" />
+          </Key>
+          <Property Name="classID" Type="int" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="500" />
+          <Property Name="className" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="crtRecommendations">
+          <Key>
+            <PropertyRef Name="recommendationID" />
+          </Key>
+          <Property Name="recommendationID" Type="int" Nullable="false" />
+          <Property Name="shipTypeID" Type="int" />
+          <Property Name="certificateID" Type="int" />
+          <Property Name="recommendationLevel" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="crtRelationships">
+          <Key>
+            <PropertyRef Name="relationshipID" />
+          </Key>
+          <Property Name="relationshipID" Type="int" Nullable="false" />
+          <Property Name="parentID" Type="int" />
+          <Property Name="parentTypeID" Type="int" />
+          <Property Name="parentLevel" Type="tinyint" />
+          <Property Name="childID" Type="int" />
+        </EntityType>
+        <EntityType Name="dgmAttributeCategories">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="tinyint" Nullable="false" />
+          <Property Name="categoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="categoryDescription" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="dgmAttributeTypes">
+          <Key>
+            <PropertyRef Name="attributeID" />
+          </Key>
+          <Property Name="attributeID" Type="smallint" Nullable="false" />
+          <Property Name="attributeName" Type="varchar" MaxLength="100" />
+          <Property Name="description" Type="varchar" MaxLength="1000" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="defaultValue" Type="float" />
+          <Property Name="published" Type="bit" />
+          <Property Name="displayName" Type="varchar" MaxLength="100" />
+          <Property Name="unitID" Type="tinyint" />
+          <Property Name="stackable" Type="bit" />
+          <Property Name="highIsGood" Type="bit" />
+          <Property Name="categoryID" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="dgmEffects">
+          <Key>
+            <PropertyRef Name="effectID" />
+          </Key>
+          <Property Name="effectID" Type="smallint" Nullable="false" />
+          <Property Name="effectName" Type="varchar" MaxLength="400" />
+          <Property Name="effectCategory" Type="smallint" />
+          <Property Name="preExpression" Type="int" />
+          <Property Name="postExpression" Type="int" />
+          <Property Name="description" Type="varchar" MaxLength="1000" />
+          <Property Name="guid" Type="varchar" MaxLength="60" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="isOffensive" Type="bit" />
+          <Property Name="isAssistance" Type="bit" />
+          <Property Name="durationAttributeID" Type="smallint" />
+          <Property Name="trackingSpeedAttributeID" Type="smallint" />
+          <Property Name="dischargeAttributeID" Type="smallint" />
+          <Property Name="rangeAttributeID" Type="smallint" />
+          <Property Name="falloffAttributeID" Type="smallint" />
+          <Property Name="disallowAutoRepeat" Type="bit" />
+          <Property Name="published" Type="bit" />
+          <Property Name="displayName" Type="varchar" MaxLength="100" />
+          <Property Name="isWarpSafe" Type="bit" />
+          <Property Name="rangeChance" Type="bit" />
+          <Property Name="electronicChance" Type="bit" />
+          <Property Name="propulsionChance" Type="bit" />
+          <Property Name="distribution" Type="tinyint" />
+          <Property Name="sfxName" Type="varchar" MaxLength="20" />
+          <Property Name="npcUsageChanceAttributeID" Type="smallint" />
+          <Property Name="npcActivationChanceAttributeID" Type="smallint" />
+          <Property Name="fittingUsageChanceAttributeID" Type="smallint" />
+        </EntityType>
+        <EntityType Name="dgmTypeAttributes">
+          <Key>
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="attributeID" />
+          </Key>
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="attributeID" Type="smallint" Nullable="false" />
+          <Property Name="valueInt" Type="int" />
+          <Property Name="valueFloat" Type="float" />
+        </EntityType>
+        <EntityType Name="dgmTypeEffects">
+          <Key>
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="effectID" />
+          </Key>
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="effectID" Type="smallint" Nullable="false" />
+          <Property Name="isDefault" Type="bit" />
+        </EntityType>
+        <EntityType Name="eveGraphics">
+          <Key>
+            <PropertyRef Name="graphicID" />
+          </Key>
+          <Property Name="graphicID" Type="int" Nullable="false" />
+          <Property Name="graphicFile" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="obsolete" Type="bit" Nullable="false" />
+          <Property Name="graphicType" Type="varchar" MaxLength="100" />
+          <Property Name="collidable" Type="bit" />
+          <Property Name="explosionID" Type="int" />
+          <Property Name="directoryID" Type="int" />
+          <Property Name="graphicName" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="eveIcons">
+          <Key>
+            <PropertyRef Name="iconID" />
+          </Key>
+          <Property Name="iconID" Type="int" Nullable="false" />
+          <Property Name="iconFile" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="eveUnits">
+          <Key>
+            <PropertyRef Name="unitID" />
+          </Key>
+          <Property Name="unitID" Type="tinyint" Nullable="false" />
+          <Property Name="unitName" Type="varchar" MaxLength="100" />
+          <Property Name="displayName" Type="varchar" MaxLength="50" />
+          <Property Name="description" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="invBlueprintTypes">
+          <Key>
+            <PropertyRef Name="blueprintTypeID" />
+          </Key>
+          <Property Name="blueprintTypeID" Type="int" Nullable="false" />
+          <Property Name="parentBlueprintTypeID" Type="int" />
+          <Property Name="productTypeID" Type="int" />
+          <Property Name="productionTime" Type="int" />
+          <Property Name="techLevel" Type="smallint" />
+          <Property Name="researchProductivityTime" Type="int" />
+          <Property Name="researchMaterialTime" Type="int" />
+          <Property Name="researchCopyTime" Type="int" />
+          <Property Name="researchTechTime" Type="int" />
+          <Property Name="productivityModifier" Type="int" />
+          <Property Name="materialModifier" Type="smallint" />
+          <Property Name="wasteFactor" Type="smallint" />
+          <Property Name="maxProductionLimit" Type="int" />
+        </EntityType>
+        <EntityType Name="invCategories">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="int" Nullable="false" />
+          <Property Name="categoryName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="3000" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="published" Type="bit" />
+        </EntityType>
+        <EntityType Name="invContrabandTypes">
+          <Key>
+            <PropertyRef Name="factionID" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="factionID" Type="int" Nullable="false" />
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="standingLoss" Type="float" />
+          <Property Name="confiscateMinSec" Type="float" />
+          <Property Name="fineByValue" Type="float" />
+          <Property Name="attackMinSec" Type="float" />
+        </EntityType>
+        <EntityType Name="invControlTowerResourcePurposes">
+          <Key>
+            <PropertyRef Name="purpose" />
+          </Key>
+          <Property Name="purpose" Type="tinyint" Nullable="false" />
+          <Property Name="purposeText" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="invControlTowerResources">
+          <Key>
+            <PropertyRef Name="controlTowerTypeID" />
+            <PropertyRef Name="resourceTypeID" />
+          </Key>
+          <Property Name="controlTowerTypeID" Type="int" Nullable="false" />
+          <Property Name="resourceTypeID" Type="int" Nullable="false" />
+          <Property Name="purpose" Type="tinyint" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="minSecurityLevel" Type="float" />
+          <Property Name="factionID" Type="int" />
+        </EntityType>
+        <EntityType Name="invFlags">
+          <Key>
+            <PropertyRef Name="flagID" />
+          </Key>
+          <Property Name="flagID" Type="smallint" Nullable="false" />
+          <Property Name="flagName" Type="varchar" MaxLength="200" />
+          <Property Name="flagText" Type="varchar" MaxLength="100" />
+          <Property Name="orderID" Type="int" />
+        </EntityType>
+        <EntityType Name="invGroups">
+          <Key>
+            <PropertyRef Name="groupID" />
+          </Key>
+          <Property Name="groupID" Type="int" Nullable="false" />
+          <Property Name="categoryID" Type="int" />
+          <Property Name="groupName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="3000" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="useBasePrice" Type="bit" />
+          <Property Name="allowManufacture" Type="bit" />
+          <Property Name="allowRecycler" Type="bit" />
+          <Property Name="anchored" Type="bit" />
+          <Property Name="anchorable" Type="bit" />
+          <Property Name="fittableNonSingleton" Type="bit" />
+          <Property Name="published" Type="bit" />
+        </EntityType>
+        <EntityType Name="invItems">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="bigint" Nullable="false" />
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="ownerID" Type="int" Nullable="false" />
+          <Property Name="locationID" Type="bigint" Nullable="false" />
+          <Property Name="flagID" Type="smallint" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="invMarketGroups">
+          <Key>
+            <PropertyRef Name="marketGroupID" />
+          </Key>
+          <Property Name="marketGroupID" Type="smallint" Nullable="false" />
+          <Property Name="parentGroupID" Type="smallint" />
+          <Property Name="marketGroupName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="3000" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="hasTypes" Type="bit" />
+        </EntityType>
+        <EntityType Name="invMetaGroups">
+          <Key>
+            <PropertyRef Name="metaGroupID" />
+          </Key>
+          <Property Name="metaGroupID" Type="smallint" Nullable="false" />
+          <Property Name="metaGroupName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="iconID" Type="int" />
+        </EntityType>
+        <EntityType Name="invMetaTypes">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="parentTypeID" Type="int" />
+          <Property Name="metaGroupID" Type="smallint" />
+        </EntityType>
+        <EntityType Name="invNames">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="bigint" Nullable="false" />
+          <Property Name="itemName" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="invPositions">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="bigint" Nullable="false" />
+          <Property Name="x" Type="float" Nullable="false" />
+          <Property Name="y" Type="float" Nullable="false" />
+          <Property Name="z" Type="float" Nullable="false" />
+          <Property Name="yaw" Type="real" />
+          <Property Name="pitch" Type="real" />
+          <Property Name="roll" Type="real" />
+        </EntityType>
+        <EntityType Name="invTypeMaterials">
+          <Key>
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="materialTypeID" />
+          </Key>
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="materialTypeID" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="invTypeReactions">
+          <Key>
+            <PropertyRef Name="reactionTypeID" />
+            <PropertyRef Name="input" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="reactionTypeID" Type="int" Nullable="false" />
+          <Property Name="input" Type="bit" Nullable="false" />
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="smallint" />
+        </EntityType>
+        <EntityType Name="invTypes">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="groupID" Type="int" />
+          <Property Name="typeName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="3000" />
+          <Property Name="graphicID" Type="int" />
+          <Property Name="radius" Type="float" />
+          <Property Name="mass" Type="float" />
+          <Property Name="volume" Type="float" />
+          <Property Name="capacity" Type="float" />
+          <Property Name="portionSize" Type="int" />
+          <Property Name="raceID" Type="tinyint" />
+          <Property Name="basePrice" Type="money" />
+          <Property Name="published" Type="bit" />
+          <Property Name="marketGroupID" Type="smallint" />
+          <Property Name="chanceOfDuplicating" Type="float" />
+          <Property Name="iconID" Type="int" />
+        </EntityType>
+        <EntityType Name="invUniqueNames">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="int" Nullable="false" />
+          <Property Name="itemName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="groupID" Type="int" />
+        </EntityType>
+        <EntityType Name="mapCelestialStatistics">
+          <Key>
+            <PropertyRef Name="celestialID" />
+          </Key>
+          <Property Name="celestialID" Type="int" Nullable="false" />
+          <Property Name="temperature" Type="float" />
+          <Property Name="spectralClass" Type="varchar" MaxLength="10" />
+          <Property Name="luminosity" Type="float" />
+          <Property Name="age" Type="float" />
+          <Property Name="life" Type="float" />
+          <Property Name="orbitRadius" Type="float" />
+          <Property Name="eccentricity" Type="float" />
+          <Property Name="massDust" Type="float" />
+          <Property Name="massGas" Type="float" />
+          <Property Name="fragmented" Type="bit" />
+          <Property Name="density" Type="float" />
+          <Property Name="surfaceGravity" Type="float" />
+          <Property Name="escapeVelocity" Type="float" />
+          <Property Name="orbitPeriod" Type="float" />
+          <Property Name="rotationRate" Type="float" />
+          <Property Name="locked" Type="bit" />
+          <Property Name="pressure" Type="float" />
+          <Property Name="radius" Type="float" />
+          <Property Name="mass" Type="float" />
+        </EntityType>
+        <EntityType Name="mapConstellationJumps">
+          <Key>
+            <PropertyRef Name="fromConstellationID" />
+            <PropertyRef Name="toConstellationID" />
+          </Key>
+          <Property Name="fromRegionID" Type="int" />
+          <Property Name="fromConstellationID" Type="int" Nullable="false" />
+          <Property Name="toConstellationID" Type="int" Nullable="false" />
+          <Property Name="toRegionID" Type="int" />
+        </EntityType>
+        <EntityType Name="mapConstellations">
+          <Key>
+            <PropertyRef Name="constellationID" />
+          </Key>
+          <Property Name="regionID" Type="int" />
+          <Property Name="constellationID" Type="int" Nullable="false" />
+          <Property Name="constellationName" Type="nvarchar" MaxLength="100" />
+          <Property Name="x" Type="float" />
+          <Property Name="y" Type="float" />
+          <Property Name="z" Type="float" />
+          <Property Name="xMin" Type="float" />
+          <Property Name="xMax" Type="float" />
+          <Property Name="yMin" Type="float" />
+          <Property Name="yMax" Type="float" />
+          <Property Name="zMin" Type="float" />
+          <Property Name="zMax" Type="float" />
+          <Property Name="factionID" Type="int" />
+          <Property Name="radius" Type="float" />
+        </EntityType>
+        <EntityType Name="mapDenormalize">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="int" Nullable="false" />
+          <Property Name="typeID" Type="int" />
+          <Property Name="groupID" Type="int" />
+          <Property Name="solarSystemID" Type="int" />
+          <Property Name="constellationID" Type="int" />
+          <Property Name="regionID" Type="int" />
+          <Property Name="orbitID" Type="int" />
+          <Property Name="x" Type="float" />
+          <Property Name="y" Type="float" />
+          <Property Name="z" Type="float" />
+          <Property Name="radius" Type="float" />
+          <Property Name="itemName" Type="nvarchar" MaxLength="100" />
+          <Property Name="security" Type="float" />
+          <Property Name="celestialIndex" Type="tinyint" />
+          <Property Name="orbitIndex" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="mapJumps">
+          <Key>
+            <PropertyRef Name="stargateID" />
+          </Key>
+          <Property Name="stargateID" Type="int" Nullable="false" />
+          <Property Name="celestialID" Type="int" />
+        </EntityType>
+        <EntityType Name="mapLandmarks">
+          <Key>
+            <PropertyRef Name="landmarkID" />
+          </Key>
+          <Property Name="landmarkID" Type="smallint" Nullable="false" />
+          <Property Name="landmarkName" Type="varchar" MaxLength="100" />
+          <Property Name="description" Type="varchar" MaxLength="7000" />
+          <Property Name="locationID" Type="int" />
+          <Property Name="x" Type="float" />
+          <Property Name="y" Type="float" />
+          <Property Name="z" Type="float" />
+          <Property Name="radius" Type="float" />
+          <Property Name="iconID" Type="int" />
+          <Property Name="importance" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="mapLocationScenes">
+          <Key>
+            <PropertyRef Name="locationID" />
+          </Key>
+          <Property Name="locationID" Type="int" Nullable="false" />
+          <Property Name="graphicID" Type="int" />
+        </EntityType>
+        <EntityType Name="mapLocationWormholeClasses">
+          <Key>
+            <PropertyRef Name="locationID" />
+          </Key>
+          <Property Name="locationID" Type="int" Nullable="false" />
+          <Property Name="wormholeClassID" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="mapRegionJumps">
+          <Key>
+            <PropertyRef Name="fromRegionID" />
+            <PropertyRef Name="toRegionID" />
+          </Key>
+          <Property Name="fromRegionID" Type="int" Nullable="false" />
+          <Property Name="toRegionID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mapRegions">
+          <Key>
+            <PropertyRef Name="regionID" />
+          </Key>
+          <Property Name="regionID" Type="int" Nullable="false" />
+          <Property Name="regionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="x" Type="float" />
+          <Property Name="y" Type="float" />
+          <Property Name="z" Type="float" />
+          <Property Name="xMin" Type="float" />
+          <Property Name="xMax" Type="float" />
+          <Property Name="yMin" Type="float" />
+          <Property Name="yMax" Type="float" />
+          <Property Name="zMin" Type="float" />
+          <Property Name="zMax" Type="float" />
+          <Property Name="factionID" Type="int" />
+          <Property Name="radius" Type="float" />
+        </EntityType>
+        <EntityType Name="mapSolarSystemJumps">
+          <Key>
+            <PropertyRef Name="fromSolarSystemID" />
+            <PropertyRef Name="toSolarSystemID" />
+          </Key>
+          <Property Name="fromRegionID" Type="int" />
+          <Property Name="fromConstellationID" Type="int" />
+          <Property Name="fromSolarSystemID" Type="int" Nullable="false" />
+          <Property Name="toSolarSystemID" Type="int" Nullable="false" />
+          <Property Name="toConstellationID" Type="int" />
+          <Property Name="toRegionID" Type="int" />
+        </EntityType>
+        <EntityType Name="mapSolarSystems">
+          <Key>
+            <PropertyRef Name="solarSystemID" />
+          </Key>
+          <Property Name="regionID" Type="int" />
+          <Property Name="constellationID" Type="int" />
+          <Property Name="solarSystemID" Type="int" Nullable="false" />
+          <Property Name="solarSystemName" Type="nvarchar" MaxLength="100" />
+          <Property Name="x" Type="float" />
+          <Property Name="y" Type="float" />
+          <Property Name="z" Type="float" />
+          <Property Name="xMin" Type="float" />
+          <Property Name="xMax" Type="float" />
+          <Property Name="yMin" Type="float" />
+          <Property Name="yMax" Type="float" />
+          <Property Name="zMin" Type="float" />
+          <Property Name="zMax" Type="float" />
+          <Property Name="luminosity" Type="float" />
+          <Property Name="border" Type="bit" />
+          <Property Name="fringe" Type="bit" />
+          <Property Name="corridor" Type="bit" />
+          <Property Name="hub" Type="bit" />
+          <Property Name="international" Type="bit" />
+          <Property Name="regional" Type="bit" />
+          <Property Name="constellation" Type="bit" />
+          <Property Name="security" Type="float" />
+          <Property Name="factionID" Type="int" />
+          <Property Name="radius" Type="float" />
+          <Property Name="sunTypeID" Type="int" />
+          <Property Name="securityClass" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="mapUniverse">
+          <Key>
+            <PropertyRef Name="universeID" />
+          </Key>
+          <Property Name="universeID" Type="int" Nullable="false" />
+          <Property Name="universeName" Type="varchar" MaxLength="100" />
+          <Property Name="x" Type="float" />
+          <Property Name="y" Type="float" />
+          <Property Name="z" Type="float" />
+          <Property Name="xMin" Type="float" />
+          <Property Name="xMax" Type="float" />
+          <Property Name="yMin" Type="float" />
+          <Property Name="yMax" Type="float" />
+          <Property Name="zMin" Type="float" />
+          <Property Name="zMax" Type="float" />
+          <Property Name="radius" Type="float" />
+        </EntityType>
+        <EntityType Name="planetSchematics">
+          <Key>
+            <PropertyRef Name="schematicID" />
+          </Key>
+          <Property Name="schematicID" Type="smallint" Nullable="false" />
+          <Property Name="schematicName" Type="nvarchar" MaxLength="255" />
+          <Property Name="cycleTime" Type="int" />
+        </EntityType>
+        <EntityType Name="planetSchematicsPinMap">
+          <Key>
+            <PropertyRef Name="schematicID" />
+            <PropertyRef Name="pinTypeID" />
+          </Key>
+          <Property Name="schematicID" Type="smallint" Nullable="false" />
+          <Property Name="pinTypeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="planetSchematicsTypeMap">
+          <Key>
+            <PropertyRef Name="schematicID" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="schematicID" Type="smallint" Nullable="false" />
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="smallint" />
+          <Property Name="isInput" Type="bit" />
+        </EntityType>
+        <EntityType Name="ramActivities">
+          <Key>
+            <PropertyRef Name="activityID" />
+          </Key>
+          <Property Name="activityID" Type="tinyint" Nullable="false" />
+          <Property Name="activityName" Type="nvarchar" MaxLength="100" />
+          <Property Name="iconNo" Type="varchar" MaxLength="5" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="published" Type="bit" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLines">
+          <Key>
+            <PropertyRef Name="assemblyLineID" />
+          </Key>
+          <Property Name="assemblyLineID" Type="int" Nullable="false" />
+          <Property Name="assemblyLineTypeID" Type="tinyint" />
+          <Property Name="containerID" Type="int" />
+          <Property Name="nextFreeTime" Type="smalldatetime" />
+          <Property Name="UIGroupingID" Type="tinyint" />
+          <Property Name="costInstall" Type="float" />
+          <Property Name="costPerHour" Type="float" />
+          <Property Name="restrictionMask" Type="tinyint" />
+          <Property Name="discountPerGoodStandingPoint" Type="float" />
+          <Property Name="surchargePerBadStandingPoint" Type="float" />
+          <Property Name="minimumStanding" Type="float" />
+          <Property Name="minimumCharSecurity" Type="float" />
+          <Property Name="minimumCorpSecurity" Type="float" />
+          <Property Name="maximumCharSecurity" Type="float" />
+          <Property Name="maximumCorpSecurity" Type="float" />
+          <Property Name="ownerID" Type="int" />
+          <Property Name="activityID" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLineStations">
+          <Key>
+            <PropertyRef Name="stationID" />
+            <PropertyRef Name="assemblyLineTypeID" />
+          </Key>
+          <Property Name="stationID" Type="int" Nullable="false" />
+          <Property Name="assemblyLineTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="quantity" Type="tinyint" />
+          <Property Name="stationTypeID" Type="int" />
+          <Property Name="ownerID" Type="int" />
+          <Property Name="solarSystemID" Type="int" />
+          <Property Name="regionID" Type="int" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLineTypeDetailPerCategory">
+          <Key>
+            <PropertyRef Name="assemblyLineTypeID" />
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="assemblyLineTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="categoryID" Type="int" Nullable="false" />
+          <Property Name="timeMultiplier" Type="float" />
+          <Property Name="materialMultiplier" Type="float" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLineTypeDetailPerGroup">
+          <Key>
+            <PropertyRef Name="assemblyLineTypeID" />
+            <PropertyRef Name="groupID" />
+          </Key>
+          <Property Name="assemblyLineTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="groupID" Type="int" Nullable="false" />
+          <Property Name="timeMultiplier" Type="float" />
+          <Property Name="materialMultiplier" Type="float" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLineTypes">
+          <Key>
+            <PropertyRef Name="assemblyLineTypeID" />
+          </Key>
+          <Property Name="assemblyLineTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="assemblyLineTypeName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="baseTimeMultiplier" Type="float" />
+          <Property Name="baseMaterialMultiplier" Type="float" />
+          <Property Name="volume" Type="float" />
+          <Property Name="activityID" Type="tinyint" />
+          <Property Name="minCostPerHour" Type="float" />
+        </EntityType>
+        <EntityType Name="ramInstallationTypeContents">
+          <Key>
+            <PropertyRef Name="installationTypeID" />
+            <PropertyRef Name="assemblyLineTypeID" />
+          </Key>
+          <Property Name="installationTypeID" Type="int" Nullable="false" />
+          <Property Name="assemblyLineTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="quantity" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="ramTypeRequirements">
+          <Key>
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="activityID" />
+            <PropertyRef Name="requiredTypeID" />
+          </Key>
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="activityID" Type="tinyint" Nullable="false" />
+          <Property Name="requiredTypeID" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="damagePerJob" Type="float" />
+          <Property Name="recycle" Type="bit" />
+        </EntityType>
+        <EntityType Name="staOperations">
+          <Key>
+            <PropertyRef Name="operationID" />
+          </Key>
+          <Property Name="activityID" Type="tinyint" />
+          <Property Name="operationID" Type="tinyint" Nullable="false" />
+          <Property Name="operationName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="fringe" Type="tinyint" />
+          <Property Name="corridor" Type="tinyint" />
+          <Property Name="hub" Type="tinyint" />
+          <Property Name="border" Type="tinyint" />
+          <Property Name="ratio" Type="tinyint" />
+          <Property Name="caldariStationTypeID" Type="int" />
+          <Property Name="minmatarStationTypeID" Type="int" />
+          <Property Name="amarrStationTypeID" Type="int" />
+          <Property Name="gallenteStationTypeID" Type="int" />
+          <Property Name="joveStationTypeID" Type="int" />
+        </EntityType>
+        <EntityType Name="staOperationServices">
+          <Key>
+            <PropertyRef Name="operationID" />
+            <PropertyRef Name="serviceID" />
+          </Key>
+          <Property Name="operationID" Type="tinyint" Nullable="false" />
+          <Property Name="serviceID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="staServices">
+          <Key>
+            <PropertyRef Name="serviceID" />
+          </Key>
+          <Property Name="serviceID" Type="int" Nullable="false" />
+          <Property Name="serviceName" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="staStations">
+          <Key>
+            <PropertyRef Name="stationID" />
+          </Key>
+          <Property Name="stationID" Type="int" Nullable="false" />
+          <Property Name="security" Type="smallint" />
+          <Property Name="dockingCostPerVolume" Type="float" />
+          <Property Name="maxShipVolumeDockable" Type="float" />
+          <Property Name="officeRentalCost" Type="int" />
+          <Property Name="operationID" Type="tinyint" />
+          <Property Name="stationTypeID" Type="int" />
+          <Property Name="corporationID" Type="int" />
+          <Property Name="solarSystemID" Type="int" />
+          <Property Name="constellationID" Type="int" />
+          <Property Name="regionID" Type="int" />
+          <Property Name="stationName" Type="nvarchar" MaxLength="100" />
+          <Property Name="x" Type="float" />
+          <Property Name="y" Type="float" />
+          <Property Name="z" Type="float" />
+          <Property Name="reprocessingEfficiency" Type="float" />
+          <Property Name="reprocessingStationsTake" Type="float" />
+          <Property Name="reprocessingHangarFlag" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="staStationTypes">
+          <Key>
+            <PropertyRef Name="stationTypeID" />
+          </Key>
+          <Property Name="stationTypeID" Type="int" Nullable="false" />
+          <Property Name="dockEntryX" Type="float" />
+          <Property Name="dockEntryY" Type="float" />
+          <Property Name="dockEntryZ" Type="float" />
+          <Property Name="dockOrientationX" Type="float" />
+          <Property Name="dockOrientationY" Type="float" />
+          <Property Name="dockOrientationZ" Type="float" />
+          <Property Name="operationID" Type="tinyint" />
+          <Property Name="officeSlots" Type="tinyint" />
+          <Property Name="reprocessingEfficiency" Type="float" />
+          <Property Name="conquerable" Type="bit" />
+        </EntityType>
+        <EntityType Name="translationTables">
+          <Key>
+            <PropertyRef Name="sourceTable" />
+            <PropertyRef Name="translatedKey" />
+          </Key>
+          <Property Name="sourceTable" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="destinationTable" Type="nvarchar" MaxLength="200" />
+          <Property Name="translatedKey" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="tcGroupID" Type="int" />
+          <Property Name="tcID" Type="int" />
+        </EntityType>
+        <EntityType Name="trnTranslationColumns">
+          <Key>
+            <PropertyRef Name="tcID" />
+          </Key>
+          <Property Name="tcGroupID" Type="smallint" />
+          <Property Name="tcID" Type="smallint" Nullable="false" />
+          <Property Name="tableName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="columnName" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="masterID" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="trnTranslationLanguages">
+          <Key>
+            <PropertyRef Name="numericLanguageID" />
+          </Key>
+          <Property Name="numericLanguageID" Type="int" Nullable="false" />
+          <Property Name="languageID" Type="varchar" MaxLength="50" />
+          <Property Name="languageName" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="trnTranslations">
+          <Key>
+            <PropertyRef Name="tcID" />
+            <PropertyRef Name="keyID" />
+            <PropertyRef Name="languageID" />
+          </Key>
+          <Property Name="tcID" Type="smallint" Nullable="false" />
+          <Property Name="keyID" Type="int" Nullable="false" />
+          <Property Name="languageID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="text" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="warCombatZones">
+          <Key>
+            <PropertyRef Name="combatZoneID" />
+          </Key>
+          <Property Name="combatZoneID" Type="int" Nullable="false" />
+          <Property Name="combatZoneName" Type="nvarchar" MaxLength="100" />
+          <Property Name="factionID" Type="int" />
+          <Property Name="centerSystemID" Type="int" />
+          <Property Name="description" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="warCombatZoneSystems">
+          <Key>
+            <PropertyRef Name="solarSystemID" />
+          </Key>
+          <Property Name="solarSystemID" Type="int" Nullable="false" />
+          <Property Name="combatZoneID" Type="int" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EveOnlineDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EveOnlineDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="agtAgents" EntityType="EveOnlineDBModel.agtAgent" />
+          <EntitySet Name="agtAgentTypes" EntityType="EveOnlineDBModel.agtAgentType" />
+          <EntitySet Name="agtResearchAgents" EntityType="EveOnlineDBModel.agtResearchAgent" />
+          <EntitySet Name="chrAncestries" EntityType="EveOnlineDBModel.chrAncestry" />
+          <EntitySet Name="chrAttributes" EntityType="EveOnlineDBModel.chrAttribute" />
+          <EntitySet Name="chrBloodlines" EntityType="EveOnlineDBModel.chrBloodline" />
+          <EntitySet Name="chrFactions" EntityType="EveOnlineDBModel.chrFaction" />
+          <EntitySet Name="chrRaces" EntityType="EveOnlineDBModel.chrRace" />
+          <EntitySet Name="crpActivities" EntityType="EveOnlineDBModel.crpActivity" />
+          <EntitySet Name="crpNPCCorporationDivisions" EntityType="EveOnlineDBModel.crpNPCCorporationDivision" />
+          <EntitySet Name="crpNPCCorporationResearchFields" EntityType="EveOnlineDBModel.crpNPCCorporationResearchField" />
+          <EntitySet Name="crpNPCCorporations" EntityType="EveOnlineDBModel.crpNPCCorporation" />
+          <EntitySet Name="crpNPCCorporationTrades" EntityType="EveOnlineDBModel.crpNPCCorporationTrade" />
+          <EntitySet Name="crpNPCDivisions" EntityType="EveOnlineDBModel.crpNPCDivision" />
+          <EntitySet Name="crtCategories" EntityType="EveOnlineDBModel.crtCategory" />
+          <EntitySet Name="crtCertificates" EntityType="EveOnlineDBModel.crtCertificate" />
+          <EntitySet Name="crtClasses" EntityType="EveOnlineDBModel.crtClass" />
+          <EntitySet Name="crtRecommendations" EntityType="EveOnlineDBModel.crtRecommendation" />
+          <EntitySet Name="crtRelationships" EntityType="EveOnlineDBModel.crtRelationship" />
+          <EntitySet Name="dgmAttributeCategories" EntityType="EveOnlineDBModel.dgmAttributeCategory" />
+          <EntitySet Name="dgmAttributeTypes" EntityType="EveOnlineDBModel.dgmAttributeType" />
+          <EntitySet Name="dgmEffects" EntityType="EveOnlineDBModel.dgmEffect" />
+          <EntitySet Name="dgmTypeAttributes" EntityType="EveOnlineDBModel.dgmTypeAttribute" />
+          <EntitySet Name="dgmTypeEffects" EntityType="EveOnlineDBModel.dgmTypeEffect" />
+          <EntitySet Name="eveGraphics" EntityType="EveOnlineDBModel.eveGraphic" />
+          <EntitySet Name="eveIcons" EntityType="EveOnlineDBModel.eveIcon" />
+          <EntitySet Name="eveUnits" EntityType="EveOnlineDBModel.eveUnit" />
+          <EntitySet Name="invBlueprintTypes" EntityType="EveOnlineDBModel.invBlueprintType" />
+          <EntitySet Name="invCategories" EntityType="EveOnlineDBModel.invCategory" />
+          <EntitySet Name="invContrabandTypes" EntityType="EveOnlineDBModel.invContrabandType" />
+          <EntitySet Name="invControlTowerResourcePurposes" EntityType="EveOnlineDBModel.invControlTowerResourcePurpos" />
+          <EntitySet Name="invControlTowerResources" EntityType="EveOnlineDBModel.invControlTowerResource" />
+          <EntitySet Name="invFlags" EntityType="EveOnlineDBModel.invFlag" />
+          <EntitySet Name="invGroups" EntityType="EveOnlineDBModel.invGroup" />
+          <EntitySet Name="invItems" EntityType="EveOnlineDBModel.invItem" />
+          <EntitySet Name="invMarketGroups" EntityType="EveOnlineDBModel.invMarketGroup" />
+          <EntitySet Name="invMetaGroups" EntityType="EveOnlineDBModel.invMetaGroup" />
+          <EntitySet Name="invMetaTypes" EntityType="EveOnlineDBModel.invMetaType" />
+          <EntitySet Name="invNames" EntityType="EveOnlineDBModel.invName" />
+          <EntitySet Name="invPositions" EntityType="EveOnlineDBModel.invPosition" />
+          <EntitySet Name="invTypeMaterials" EntityType="EveOnlineDBModel.invTypeMaterial" />
+          <EntitySet Name="invTypeReactions" EntityType="EveOnlineDBModel.invTypeReaction" />
+          <EntitySet Name="invTypes" EntityType="EveOnlineDBModel.invType" />
+          <EntitySet Name="invUniqueNames" EntityType="EveOnlineDBModel.invUniqueName" />
+          <EntitySet Name="mapCelestialStatistics" EntityType="EveOnlineDBModel.mapCelestialStatistic" />
+          <EntitySet Name="mapConstellationJumps" EntityType="EveOnlineDBModel.mapConstellationJump" />
+          <EntitySet Name="mapConstellations" EntityType="EveOnlineDBModel.mapConstellation" />
+          <EntitySet Name="mapDenormalizes" EntityType="EveOnlineDBModel.mapDenormalize" />
+          <EntitySet Name="mapJumps" EntityType="EveOnlineDBModel.mapJump" />
+          <EntitySet Name="mapLandmarks" EntityType="EveOnlineDBModel.mapLandmark" />
+          <EntitySet Name="mapLocationScenes" EntityType="EveOnlineDBModel.mapLocationScene" />
+          <EntitySet Name="mapLocationWormholeClasses" EntityType="EveOnlineDBModel.mapLocationWormholeClass" />
+          <EntitySet Name="mapRegionJumps" EntityType="EveOnlineDBModel.mapRegionJump" />
+          <EntitySet Name="mapRegions" EntityType="EveOnlineDBModel.mapRegion" />
+          <EntitySet Name="mapSolarSystemJumps" EntityType="EveOnlineDBModel.mapSolarSystemJump" />
+          <EntitySet Name="mapSolarSystems" EntityType="EveOnlineDBModel.mapSolarSystem" />
+          <EntitySet Name="mapUniverses" EntityType="EveOnlineDBModel.mapUniverse" />
+          <EntitySet Name="planetSchematics" EntityType="EveOnlineDBModel.planetSchematic" />
+          <EntitySet Name="planetSchematicsPinMaps" EntityType="EveOnlineDBModel.planetSchematicsPinMap" />
+          <EntitySet Name="planetSchematicsTypeMaps" EntityType="EveOnlineDBModel.planetSchematicsTypeMap" />
+          <EntitySet Name="ramActivities" EntityType="EveOnlineDBModel.ramActivity" />
+          <EntitySet Name="ramAssemblyLines" EntityType="EveOnlineDBModel.ramAssemblyLine" />
+          <EntitySet Name="ramAssemblyLineStations" EntityType="EveOnlineDBModel.ramAssemblyLineStation" />
+          <EntitySet Name="ramAssemblyLineTypeDetailPerCategories" EntityType="EveOnlineDBModel.ramAssemblyLineTypeDetailPerCategory" />
+          <EntitySet Name="ramAssemblyLineTypeDetailPerGroups" EntityType="EveOnlineDBModel.ramAssemblyLineTypeDetailPerGroup" />
+          <EntitySet Name="ramAssemblyLineTypes" EntityType="EveOnlineDBModel.ramAssemblyLineType" />
+          <EntitySet Name="ramInstallationTypeContents" EntityType="EveOnlineDBModel.ramInstallationTypeContent" />
+          <EntitySet Name="ramTypeRequirements" EntityType="EveOnlineDBModel.ramTypeRequirement" />
+          <EntitySet Name="staOperations" EntityType="EveOnlineDBModel.staOperation" />
+          <EntitySet Name="staOperationServices" EntityType="EveOnlineDBModel.staOperationService" />
+          <EntitySet Name="staServices" EntityType="EveOnlineDBModel.staService" />
+          <EntitySet Name="staStations" EntityType="EveOnlineDBModel.staStation" />
+          <EntitySet Name="staStationTypes" EntityType="EveOnlineDBModel.staStationType" />
+          <EntitySet Name="translationTables" EntityType="EveOnlineDBModel.translationTable" />
+          <EntitySet Name="trnTranslationColumns" EntityType="EveOnlineDBModel.trnTranslationColumn" />
+          <EntitySet Name="trnTranslationLanguages" EntityType="EveOnlineDBModel.trnTranslationLanguage" />
+          <EntitySet Name="trnTranslations" EntityType="EveOnlineDBModel.trnTranslation" />
+          <EntitySet Name="warCombatZones" EntityType="EveOnlineDBModel.warCombatZone" />
+          <EntitySet Name="warCombatZoneSystems" EntityType="EveOnlineDBModel.warCombatZoneSystem" />
+        </EntityContainer>
+        <EntityType Name="agtAgent">
+          <Key>
+            <PropertyRef Name="agentID" />
+          </Key>
+          <Property Name="agentID" Type="Int32" Nullable="false" />
+          <Property Name="divisionID" Type="Byte" />
+          <Property Name="corporationID" Type="Int32" />
+          <Property Name="locationID" Type="Int32" />
+          <Property Name="level" Type="Byte" />
+          <Property Name="quality" Type="Int16" />
+          <Property Name="agentTypeID" Type="Int32" />
+          <Property Name="isLocator" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="agtAgentType">
+          <Key>
+            <PropertyRef Name="agentTypeID" />
+          </Key>
+          <Property Name="agentTypeID" Type="Int32" Nullable="false" />
+          <Property Name="agentType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="agtResearchAgent">
+          <Key>
+            <PropertyRef Name="agentID" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="agentID" Type="Int32" Nullable="false" />
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="chrAncestry">
+          <Key>
+            <PropertyRef Name="ancestryID" />
+          </Key>
+          <Property Name="ancestryID" Type="Byte" Nullable="false" />
+          <Property Name="ancestryName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="bloodlineID" Type="Byte" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="perception" Type="Byte" />
+          <Property Name="willpower" Type="Byte" />
+          <Property Name="charisma" Type="Byte" />
+          <Property Name="memory" Type="Byte" />
+          <Property Name="intelligence" Type="Byte" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="shortDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="chrAttribute">
+          <Key>
+            <PropertyRef Name="attributeID" />
+          </Key>
+          <Property Name="attributeID" Type="Byte" Nullable="false" />
+          <Property Name="attributeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="shortDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="notes" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="chrBloodline">
+          <Key>
+            <PropertyRef Name="bloodlineID" />
+          </Key>
+          <Property Name="bloodlineID" Type="Byte" Nullable="false" />
+          <Property Name="bloodlineName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="raceID" Type="Byte" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="maleDescription" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="femaleDescription" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="shipTypeID" Type="Int32" />
+          <Property Name="corporationID" Type="Int32" />
+          <Property Name="perception" Type="Byte" />
+          <Property Name="willpower" Type="Byte" />
+          <Property Name="charisma" Type="Byte" />
+          <Property Name="memory" Type="Byte" />
+          <Property Name="intelligence" Type="Byte" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="shortDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="shortMaleDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="shortFemaleDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="chrFaction">
+          <Key>
+            <PropertyRef Name="factionID" />
+          </Key>
+          <Property Name="factionID" Type="Int32" Nullable="false" />
+          <Property Name="factionName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="raceIDs" Type="Int32" />
+          <Property Name="solarSystemID" Type="Int32" />
+          <Property Name="corporationID" Type="Int32" />
+          <Property Name="sizeFactor" Type="Double" />
+          <Property Name="stationCount" Type="Int16" />
+          <Property Name="stationSystemCount" Type="Int16" />
+          <Property Name="militiaCorporationID" Type="Int32" />
+          <Property Name="iconID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="chrRace">
+          <Key>
+            <PropertyRef Name="raceID" />
+          </Key>
+          <Property Name="raceID" Type="Byte" Nullable="false" />
+          <Property Name="raceName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="shortDescription" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="crpActivity">
+          <Key>
+            <PropertyRef Name="activityID" />
+          </Key>
+          <Property Name="activityID" Type="Byte" Nullable="false" />
+          <Property Name="activityName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="crpNPCCorporationDivision">
+          <Key>
+            <PropertyRef Name="corporationID" />
+            <PropertyRef Name="divisionID" />
+          </Key>
+          <Property Name="corporationID" Type="Int32" Nullable="false" />
+          <Property Name="divisionID" Type="Byte" Nullable="false" />
+          <Property Name="size" Type="Byte" />
+        </EntityType>
+        <EntityType Name="crpNPCCorporationResearchField">
+          <Key>
+            <PropertyRef Name="skillID" />
+            <PropertyRef Name="corporationID" />
+          </Key>
+          <Property Name="skillID" Type="Int32" Nullable="false" />
+          <Property Name="corporationID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="crpNPCCorporation">
+          <Key>
+            <PropertyRef Name="corporationID" />
+          </Key>
+          <Property Name="corporationID" Type="Int32" Nullable="false" />
+          <Property Name="size" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="extent" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="solarSystemID" Type="Int32" />
+          <Property Name="investorID1" Type="Int32" />
+          <Property Name="investorShares1" Type="Byte" />
+          <Property Name="investorID2" Type="Int32" />
+          <Property Name="investorShares2" Type="Byte" />
+          <Property Name="investorID3" Type="Int32" />
+          <Property Name="investorShares3" Type="Byte" />
+          <Property Name="investorID4" Type="Int32" />
+          <Property Name="investorShares4" Type="Byte" />
+          <Property Name="friendID" Type="Int32" />
+          <Property Name="enemyID" Type="Int32" />
+          <Property Name="publicShares" Type="Int64" />
+          <Property Name="initialPrice" Type="Int32" />
+          <Property Name="minSecurity" Type="Double" />
+          <Property Name="scattered" Type="Boolean" />
+          <Property Name="fringe" Type="Byte" />
+          <Property Name="corridor" Type="Byte" />
+          <Property Name="hub" Type="Byte" />
+          <Property Name="border" Type="Byte" />
+          <Property Name="factionID" Type="Int32" />
+          <Property Name="sizeFactor" Type="Double" />
+          <Property Name="stationCount" Type="Int16" />
+          <Property Name="stationSystemCount" Type="Int16" />
+          <Property Name="description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="iconID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="crpNPCCorporationTrade">
+          <Key>
+            <PropertyRef Name="corporationID" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="corporationID" Type="Int32" Nullable="false" />
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="crpNPCDivision">
+          <Key>
+            <PropertyRef Name="divisionID" />
+          </Key>
+          <Property Name="divisionID" Type="Byte" Nullable="false" />
+          <Property Name="divisionName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="leaderType" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="crtCategory">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="Byte" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="categoryName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="crtCertificate">
+          <Key>
+            <PropertyRef Name="certificateID" />
+          </Key>
+          <Property Name="certificateID" Type="Int32" Nullable="false" />
+          <Property Name="categoryID" Type="Byte" />
+          <Property Name="classID" Type="Int32" />
+          <Property Name="grade" Type="Byte" />
+          <Property Name="corpID" Type="Int32" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="crtClass">
+          <Key>
+            <PropertyRef Name="classID" />
+          </Key>
+          <Property Name="classID" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="className" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="crtRecommendation">
+          <Key>
+            <PropertyRef Name="recommendationID" />
+          </Key>
+          <Property Name="recommendationID" Type="Int32" Nullable="false" />
+          <Property Name="shipTypeID" Type="Int32" />
+          <Property Name="certificateID" Type="Int32" />
+          <Property Name="recommendationLevel" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="crtRelationship">
+          <Key>
+            <PropertyRef Name="relationshipID" />
+          </Key>
+          <Property Name="relationshipID" Type="Int32" Nullable="false" />
+          <Property Name="parentID" Type="Int32" />
+          <Property Name="parentTypeID" Type="Int32" />
+          <Property Name="parentLevel" Type="Byte" />
+          <Property Name="childID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="dgmAttributeCategory">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="Byte" Nullable="false" />
+          <Property Name="categoryName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="categoryDescription" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="dgmAttributeType">
+          <Key>
+            <PropertyRef Name="attributeID" />
+          </Key>
+          <Property Name="attributeID" Type="Int16" Nullable="false" />
+          <Property Name="attributeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="defaultValue" Type="Double" />
+          <Property Name="published" Type="Boolean" />
+          <Property Name="displayName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="unitID" Type="Byte" />
+          <Property Name="stackable" Type="Boolean" />
+          <Property Name="highIsGood" Type="Boolean" />
+          <Property Name="categoryID" Type="Byte" />
+        </EntityType>
+        <EntityType Name="dgmEffect">
+          <Key>
+            <PropertyRef Name="effectID" />
+          </Key>
+          <Property Name="effectID" Type="Int16" Nullable="false" />
+          <Property Name="effectName" Type="String" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="effectCategory" Type="Int16" />
+          <Property Name="preExpression" Type="Int32" />
+          <Property Name="postExpression" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="guid" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="isOffensive" Type="Boolean" />
+          <Property Name="isAssistance" Type="Boolean" />
+          <Property Name="durationAttributeID" Type="Int16" />
+          <Property Name="trackingSpeedAttributeID" Type="Int16" />
+          <Property Name="dischargeAttributeID" Type="Int16" />
+          <Property Name="rangeAttributeID" Type="Int16" />
+          <Property Name="falloffAttributeID" Type="Int16" />
+          <Property Name="disallowAutoRepeat" Type="Boolean" />
+          <Property Name="published" Type="Boolean" />
+          <Property Name="displayName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="isWarpSafe" Type="Boolean" />
+          <Property Name="rangeChance" Type="Boolean" />
+          <Property Name="electronicChance" Type="Boolean" />
+          <Property Name="propulsionChance" Type="Boolean" />
+          <Property Name="distribution" Type="Byte" />
+          <Property Name="sfxName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="npcUsageChanceAttributeID" Type="Int16" />
+          <Property Name="npcActivationChanceAttributeID" Type="Int16" />
+          <Property Name="fittingUsageChanceAttributeID" Type="Int16" />
+        </EntityType>
+        <EntityType Name="dgmTypeAttribute">
+          <Key>
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="attributeID" />
+          </Key>
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="attributeID" Type="Int16" Nullable="false" />
+          <Property Name="valueInt" Type="Int32" />
+          <Property Name="valueFloat" Type="Double" />
+        </EntityType>
+        <EntityType Name="dgmTypeEffect">
+          <Key>
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="effectID" />
+          </Key>
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="effectID" Type="Int16" Nullable="false" />
+          <Property Name="isDefault" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="eveGraphic">
+          <Key>
+            <PropertyRef Name="graphicID" />
+          </Key>
+          <Property Name="graphicID" Type="Int32" Nullable="false" />
+          <Property Name="graphicFile" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="obsolete" Type="Boolean" Nullable="false" />
+          <Property Name="graphicType" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="collidable" Type="Boolean" />
+          <Property Name="explosionID" Type="Int32" />
+          <Property Name="directoryID" Type="Int32" />
+          <Property Name="graphicName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="eveIcon">
+          <Key>
+            <PropertyRef Name="iconID" />
+          </Key>
+          <Property Name="iconID" Type="Int32" Nullable="false" />
+          <Property Name="iconFile" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="eveUnit">
+          <Key>
+            <PropertyRef Name="unitID" />
+          </Key>
+          <Property Name="unitID" Type="Byte" Nullable="false" />
+          <Property Name="unitName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="displayName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="invBlueprintType">
+          <Key>
+            <PropertyRef Name="blueprintTypeID" />
+          </Key>
+          <Property Name="blueprintTypeID" Type="Int32" Nullable="false" />
+          <Property Name="parentBlueprintTypeID" Type="Int32" />
+          <Property Name="productTypeID" Type="Int32" />
+          <Property Name="productionTime" Type="Int32" />
+          <Property Name="techLevel" Type="Int16" />
+          <Property Name="researchProductivityTime" Type="Int32" />
+          <Property Name="researchMaterialTime" Type="Int32" />
+          <Property Name="researchCopyTime" Type="Int32" />
+          <Property Name="researchTechTime" Type="Int32" />
+          <Property Name="productivityModifier" Type="Int32" />
+          <Property Name="materialModifier" Type="Int16" />
+          <Property Name="wasteFactor" Type="Int16" />
+          <Property Name="maxProductionLimit" Type="Int32" />
+        </EntityType>
+        <EntityType Name="invCategory">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="Int32" Nullable="false" />
+          <Property Name="categoryName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="published" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="invContrabandType">
+          <Key>
+            <PropertyRef Name="factionID" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="factionID" Type="Int32" Nullable="false" />
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="standingLoss" Type="Double" />
+          <Property Name="confiscateMinSec" Type="Double" />
+          <Property Name="fineByValue" Type="Double" />
+          <Property Name="attackMinSec" Type="Double" />
+        </EntityType>
+        <EntityType Name="invControlTowerResourcePurpos">
+          <Key>
+            <PropertyRef Name="purpose" />
+          </Key>
+          <Property Name="purpose" Type="Byte" Nullable="false" />
+          <Property Name="purposeText" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="invControlTowerResource">
+          <Key>
+            <PropertyRef Name="controlTowerTypeID" />
+            <PropertyRef Name="resourceTypeID" />
+          </Key>
+          <Property Name="controlTowerTypeID" Type="Int32" Nullable="false" />
+          <Property Name="resourceTypeID" Type="Int32" Nullable="false" />
+          <Property Name="purpose" Type="Byte" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="minSecurityLevel" Type="Double" />
+          <Property Name="factionID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="invFlag">
+          <Key>
+            <PropertyRef Name="flagID" />
+          </Key>
+          <Property Name="flagID" Type="Int16" Nullable="false" />
+          <Property Name="flagName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="flagText" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="orderID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="invGroup">
+          <Key>
+            <PropertyRef Name="groupID" />
+          </Key>
+          <Property Name="groupID" Type="Int32" Nullable="false" />
+          <Property Name="categoryID" Type="Int32" />
+          <Property Name="groupName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="useBasePrice" Type="Boolean" />
+          <Property Name="allowManufacture" Type="Boolean" />
+          <Property Name="allowRecycler" Type="Boolean" />
+          <Property Name="anchored" Type="Boolean" />
+          <Property Name="anchorable" Type="Boolean" />
+          <Property Name="fittableNonSingleton" Type="Boolean" />
+          <Property Name="published" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="invItem">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="Int64" Nullable="false" />
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="ownerID" Type="Int32" Nullable="false" />
+          <Property Name="locationID" Type="Int64" Nullable="false" />
+          <Property Name="flagID" Type="Int16" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="invMarketGroup">
+          <Key>
+            <PropertyRef Name="marketGroupID" />
+          </Key>
+          <Property Name="marketGroupID" Type="Int16" Nullable="false" />
+          <Property Name="parentGroupID" Type="Int16" />
+          <Property Name="marketGroupName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="hasTypes" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="invMetaGroup">
+          <Key>
+            <PropertyRef Name="metaGroupID" />
+          </Key>
+          <Property Name="metaGroupID" Type="Int16" Nullable="false" />
+          <Property Name="metaGroupName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="iconID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="invMetaType">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="parentTypeID" Type="Int32" />
+          <Property Name="metaGroupID" Type="Int16" />
+        </EntityType>
+        <EntityType Name="invName">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="Int64" Nullable="false" />
+          <Property Name="itemName" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="invPosition">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="Int64" Nullable="false" />
+          <Property Name="x" Type="Double" Nullable="false" />
+          <Property Name="y" Type="Double" Nullable="false" />
+          <Property Name="z" Type="Double" Nullable="false" />
+          <Property Name="yaw" Type="Single" />
+          <Property Name="pitch" Type="Single" />
+          <Property Name="roll" Type="Single" />
+        </EntityType>
+        <EntityType Name="invTypeMaterial">
+          <Key>
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="materialTypeID" />
+          </Key>
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="materialTypeID" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="invTypeReaction">
+          <Key>
+            <PropertyRef Name="reactionTypeID" />
+            <PropertyRef Name="input" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="reactionTypeID" Type="Int32" Nullable="false" />
+          <Property Name="input" Type="Boolean" Nullable="false" />
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int16" />
+        </EntityType>
+        <EntityType Name="invType">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="groupID" Type="Int32" />
+          <Property Name="typeName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="graphicID" Type="Int32" />
+          <Property Name="radius" Type="Double" />
+          <Property Name="mass" Type="Double" />
+          <Property Name="volume" Type="Double" />
+          <Property Name="capacity" Type="Double" />
+          <Property Name="portionSize" Type="Int32" />
+          <Property Name="raceID" Type="Byte" />
+          <Property Name="basePrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="published" Type="Boolean" />
+          <Property Name="marketGroupID" Type="Int16" />
+          <Property Name="chanceOfDuplicating" Type="Double" />
+          <Property Name="iconID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="invUniqueName">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="Int32" Nullable="false" />
+          <Property Name="itemName" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="groupID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="mapCelestialStatistic">
+          <Key>
+            <PropertyRef Name="celestialID" />
+          </Key>
+          <Property Name="celestialID" Type="Int32" Nullable="false" />
+          <Property Name="temperature" Type="Double" />
+          <Property Name="spectralClass" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="luminosity" Type="Double" />
+          <Property Name="age" Type="Double" />
+          <Property Name="life" Type="Double" />
+          <Property Name="orbitRadius" Type="Double" />
+          <Property Name="eccentricity" Type="Double" />
+          <Property Name="massDust" Type="Double" />
+          <Property Name="massGas" Type="Double" />
+          <Property Name="fragmented" Type="Boolean" />
+          <Property Name="density" Type="Double" />
+          <Property Name="surfaceGravity" Type="Double" />
+          <Property Name="escapeVelocity" Type="Double" />
+          <Property Name="orbitPeriod" Type="Double" />
+          <Property Name="rotationRate" Type="Double" />
+          <Property Name="locked" Type="Boolean" />
+          <Property Name="pressure" Type="Double" />
+          <Property Name="radius" Type="Double" />
+          <Property Name="mass" Type="Double" />
+        </EntityType>
+        <EntityType Name="mapConstellationJump">
+          <Key>
+            <PropertyRef Name="fromConstellationID" />
+            <PropertyRef Name="toConstellationID" />
+          </Key>
+          <Property Name="fromRegionID" Type="Int32" />
+          <Property Name="fromConstellationID" Type="Int32" Nullable="false" />
+          <Property Name="toConstellationID" Type="Int32" Nullable="false" />
+          <Property Name="toRegionID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="mapConstellation">
+          <Key>
+            <PropertyRef Name="constellationID" />
+          </Key>
+          <Property Name="regionID" Type="Int32" />
+          <Property Name="constellationID" Type="Int32" Nullable="false" />
+          <Property Name="constellationName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="x" Type="Double" />
+          <Property Name="y" Type="Double" />
+          <Property Name="z" Type="Double" />
+          <Property Name="xMin" Type="Double" />
+          <Property Name="xMax" Type="Double" />
+          <Property Name="yMin" Type="Double" />
+          <Property Name="yMax" Type="Double" />
+          <Property Name="zMin" Type="Double" />
+          <Property Name="zMax" Type="Double" />
+          <Property Name="factionID" Type="Int32" />
+          <Property Name="radius" Type="Double" />
+        </EntityType>
+        <EntityType Name="mapDenormalize">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="Int32" Nullable="false" />
+          <Property Name="typeID" Type="Int32" />
+          <Property Name="groupID" Type="Int32" />
+          <Property Name="solarSystemID" Type="Int32" />
+          <Property Name="constellationID" Type="Int32" />
+          <Property Name="regionID" Type="Int32" />
+          <Property Name="orbitID" Type="Int32" />
+          <Property Name="x" Type="Double" />
+          <Property Name="y" Type="Double" />
+          <Property Name="z" Type="Double" />
+          <Property Name="radius" Type="Double" />
+          <Property Name="itemName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="security" Type="Double" />
+          <Property Name="celestialIndex" Type="Byte" />
+          <Property Name="orbitIndex" Type="Byte" />
+        </EntityType>
+        <EntityType Name="mapJump">
+          <Key>
+            <PropertyRef Name="stargateID" />
+          </Key>
+          <Property Name="stargateID" Type="Int32" Nullable="false" />
+          <Property Name="celestialID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="mapLandmark">
+          <Key>
+            <PropertyRef Name="landmarkID" />
+          </Key>
+          <Property Name="landmarkID" Type="Int16" Nullable="false" />
+          <Property Name="landmarkName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="7000" Unicode="false" FixedLength="false" />
+          <Property Name="locationID" Type="Int32" />
+          <Property Name="x" Type="Double" />
+          <Property Name="y" Type="Double" />
+          <Property Name="z" Type="Double" />
+          <Property Name="radius" Type="Double" />
+          <Property Name="iconID" Type="Int32" />
+          <Property Name="importance" Type="Byte" />
+        </EntityType>
+        <EntityType Name="mapLocationScene">
+          <Key>
+            <PropertyRef Name="locationID" />
+          </Key>
+          <Property Name="locationID" Type="Int32" Nullable="false" />
+          <Property Name="graphicID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="mapLocationWormholeClass">
+          <Key>
+            <PropertyRef Name="locationID" />
+          </Key>
+          <Property Name="locationID" Type="Int32" Nullable="false" />
+          <Property Name="wormholeClassID" Type="Byte" />
+        </EntityType>
+        <EntityType Name="mapRegionJump">
+          <Key>
+            <PropertyRef Name="fromRegionID" />
+            <PropertyRef Name="toRegionID" />
+          </Key>
+          <Property Name="fromRegionID" Type="Int32" Nullable="false" />
+          <Property Name="toRegionID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mapRegion">
+          <Key>
+            <PropertyRef Name="regionID" />
+          </Key>
+          <Property Name="regionID" Type="Int32" Nullable="false" />
+          <Property Name="regionName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="x" Type="Double" />
+          <Property Name="y" Type="Double" />
+          <Property Name="z" Type="Double" />
+          <Property Name="xMin" Type="Double" />
+          <Property Name="xMax" Type="Double" />
+          <Property Name="yMin" Type="Double" />
+          <Property Name="yMax" Type="Double" />
+          <Property Name="zMin" Type="Double" />
+          <Property Name="zMax" Type="Double" />
+          <Property Name="factionID" Type="Int32" />
+          <Property Name="radius" Type="Double" />
+        </EntityType>
+        <EntityType Name="mapSolarSystemJump">
+          <Key>
+            <PropertyRef Name="fromSolarSystemID" />
+            <PropertyRef Name="toSolarSystemID" />
+          </Key>
+          <Property Name="fromRegionID" Type="Int32" />
+          <Property Name="fromConstellationID" Type="Int32" />
+          <Property Name="fromSolarSystemID" Type="Int32" Nullable="false" />
+          <Property Name="toSolarSystemID" Type="Int32" Nullable="false" />
+          <Property Name="toConstellationID" Type="Int32" />
+          <Property Name="toRegionID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="mapSolarSystem">
+          <Key>
+            <PropertyRef Name="solarSystemID" />
+          </Key>
+          <Property Name="regionID" Type="Int32" />
+          <Property Name="constellationID" Type="Int32" />
+          <Property Name="solarSystemID" Type="Int32" Nullable="false" />
+          <Property Name="solarSystemName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="x" Type="Double" />
+          <Property Name="y" Type="Double" />
+          <Property Name="z" Type="Double" />
+          <Property Name="xMin" Type="Double" />
+          <Property Name="xMax" Type="Double" />
+          <Property Name="yMin" Type="Double" />
+          <Property Name="yMax" Type="Double" />
+          <Property Name="zMin" Type="Double" />
+          <Property Name="zMax" Type="Double" />
+          <Property Name="luminosity" Type="Double" />
+          <Property Name="border" Type="Boolean" />
+          <Property Name="fringe" Type="Boolean" />
+          <Property Name="corridor" Type="Boolean" />
+          <Property Name="hub" Type="Boolean" />
+          <Property Name="international" Type="Boolean" />
+          <Property Name="regional" Type="Boolean" />
+          <Property Name="constellation" Type="Boolean" />
+          <Property Name="security" Type="Double" />
+          <Property Name="factionID" Type="Int32" />
+          <Property Name="radius" Type="Double" />
+          <Property Name="sunTypeID" Type="Int32" />
+          <Property Name="securityClass" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="mapUniverse">
+          <Key>
+            <PropertyRef Name="universeID" />
+          </Key>
+          <Property Name="universeID" Type="Int32" Nullable="false" />
+          <Property Name="universeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="x" Type="Double" />
+          <Property Name="y" Type="Double" />
+          <Property Name="z" Type="Double" />
+          <Property Name="xMin" Type="Double" />
+          <Property Name="xMax" Type="Double" />
+          <Property Name="yMin" Type="Double" />
+          <Property Name="yMax" Type="Double" />
+          <Property Name="zMin" Type="Double" />
+          <Property Name="zMax" Type="Double" />
+          <Property Name="radius" Type="Double" />
+        </EntityType>
+        <EntityType Name="planetSchematic">
+          <Key>
+            <PropertyRef Name="schematicID" />
+          </Key>
+          <Property Name="schematicID" Type="Int16" Nullable="false" />
+          <Property Name="schematicName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="cycleTime" Type="Int32" />
+        </EntityType>
+        <EntityType Name="planetSchematicsPinMap">
+          <Key>
+            <PropertyRef Name="schematicID" />
+            <PropertyRef Name="pinTypeID" />
+          </Key>
+          <Property Name="schematicID" Type="Int16" Nullable="false" />
+          <Property Name="pinTypeID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="planetSchematicsTypeMap">
+          <Key>
+            <PropertyRef Name="schematicID" />
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="schematicID" Type="Int16" Nullable="false" />
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int16" />
+          <Property Name="isInput" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ramActivity">
+          <Key>
+            <PropertyRef Name="activityID" />
+          </Key>
+          <Property Name="activityID" Type="Byte" Nullable="false" />
+          <Property Name="activityName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="iconNo" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="published" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLine">
+          <Key>
+            <PropertyRef Name="assemblyLineID" />
+          </Key>
+          <Property Name="assemblyLineID" Type="Int32" Nullable="false" />
+          <Property Name="assemblyLineTypeID" Type="Byte" />
+          <Property Name="containerID" Type="Int32" />
+          <Property Name="nextFreeTime" Type="DateTime" />
+          <Property Name="UIGroupingID" Type="Byte" />
+          <Property Name="costInstall" Type="Double" />
+          <Property Name="costPerHour" Type="Double" />
+          <Property Name="restrictionMask" Type="Byte" />
+          <Property Name="discountPerGoodStandingPoint" Type="Double" />
+          <Property Name="surchargePerBadStandingPoint" Type="Double" />
+          <Property Name="minimumStanding" Type="Double" />
+          <Property Name="minimumCharSecurity" Type="Double" />
+          <Property Name="minimumCorpSecurity" Type="Double" />
+          <Property Name="maximumCharSecurity" Type="Double" />
+          <Property Name="maximumCorpSecurity" Type="Double" />
+          <Property Name="ownerID" Type="Int32" />
+          <Property Name="activityID" Type="Byte" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLineStation">
+          <Key>
+            <PropertyRef Name="stationID" />
+            <PropertyRef Name="assemblyLineTypeID" />
+          </Key>
+          <Property Name="stationID" Type="Int32" Nullable="false" />
+          <Property Name="assemblyLineTypeID" Type="Byte" Nullable="false" />
+          <Property Name="quantity" Type="Byte" />
+          <Property Name="stationTypeID" Type="Int32" />
+          <Property Name="ownerID" Type="Int32" />
+          <Property Name="solarSystemID" Type="Int32" />
+          <Property Name="regionID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLineTypeDetailPerCategory">
+          <Key>
+            <PropertyRef Name="assemblyLineTypeID" />
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="assemblyLineTypeID" Type="Byte" Nullable="false" />
+          <Property Name="categoryID" Type="Int32" Nullable="false" />
+          <Property Name="timeMultiplier" Type="Double" />
+          <Property Name="materialMultiplier" Type="Double" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLineTypeDetailPerGroup">
+          <Key>
+            <PropertyRef Name="assemblyLineTypeID" />
+            <PropertyRef Name="groupID" />
+          </Key>
+          <Property Name="assemblyLineTypeID" Type="Byte" Nullable="false" />
+          <Property Name="groupID" Type="Int32" Nullable="false" />
+          <Property Name="timeMultiplier" Type="Double" />
+          <Property Name="materialMultiplier" Type="Double" />
+        </EntityType>
+        <EntityType Name="ramAssemblyLineType">
+          <Key>
+            <PropertyRef Name="assemblyLineTypeID" />
+          </Key>
+          <Property Name="assemblyLineTypeID" Type="Byte" Nullable="false" />
+          <Property Name="assemblyLineTypeName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="baseTimeMultiplier" Type="Double" />
+          <Property Name="baseMaterialMultiplier" Type="Double" />
+          <Property Name="volume" Type="Double" />
+          <Property Name="activityID" Type="Byte" />
+          <Property Name="minCostPerHour" Type="Double" />
+        </EntityType>
+        <EntityType Name="ramInstallationTypeContent">
+          <Key>
+            <PropertyRef Name="installationTypeID" />
+            <PropertyRef Name="assemblyLineTypeID" />
+          </Key>
+          <Property Name="installationTypeID" Type="Int32" Nullable="false" />
+          <Property Name="assemblyLineTypeID" Type="Byte" Nullable="false" />
+          <Property Name="quantity" Type="Byte" />
+        </EntityType>
+        <EntityType Name="ramTypeRequirement">
+          <Key>
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="activityID" />
+            <PropertyRef Name="requiredTypeID" />
+          </Key>
+          <Property Name="typeID" Type="Int32" Nullable="false" />
+          <Property Name="activityID" Type="Byte" Nullable="false" />
+          <Property Name="requiredTypeID" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="damagePerJob" Type="Double" />
+          <Property Name="recycle" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="staOperation">
+          <Key>
+            <PropertyRef Name="operationID" />
+          </Key>
+          <Property Name="activityID" Type="Byte" />
+          <Property Name="operationID" Type="Byte" Nullable="false" />
+          <Property Name="operationName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="fringe" Type="Byte" />
+          <Property Name="corridor" Type="Byte" />
+          <Property Name="hub" Type="Byte" />
+          <Property Name="border" Type="Byte" />
+          <Property Name="ratio" Type="Byte" />
+          <Property Name="caldariStationTypeID" Type="Int32" />
+          <Property Name="minmatarStationTypeID" Type="Int32" />
+          <Property Name="amarrStationTypeID" Type="Int32" />
+          <Property Name="gallenteStationTypeID" Type="Int32" />
+          <Property Name="joveStationTypeID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="staOperationService">
+          <Key>
+            <PropertyRef Name="operationID" />
+            <PropertyRef Name="serviceID" />
+          </Key>
+          <Property Name="operationID" Type="Byte" Nullable="false" />
+          <Property Name="serviceID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="staService">
+          <Key>
+            <PropertyRef Name="serviceID" />
+          </Key>
+          <Property Name="serviceID" Type="Int32" Nullable="false" />
+          <Property Name="serviceName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="staStation">
+          <Key>
+            <PropertyRef Name="stationID" />
+          </Key>
+          <Property Name="stationID" Type="Int32" Nullable="false" />
+          <Property Name="security" Type="Int16" />
+          <Property Name="dockingCostPerVolume" Type="Double" />
+          <Property Name="maxShipVolumeDockable" Type="Double" />
+          <Property Name="officeRentalCost" Type="Int32" />
+          <Property Name="operationID" Type="Byte" />
+          <Property Name="stationTypeID" Type="Int32" />
+          <Property Name="corporationID" Type="Int32" />
+          <Property Name="solarSystemID" Type="Int32" />
+          <Property Name="constellationID" Type="Int32" />
+          <Property Name="regionID" Type="Int32" />
+          <Property Name="stationName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="x" Type="Double" />
+          <Property Name="y" Type="Double" />
+          <Property Name="z" Type="Double" />
+          <Property Name="reprocessingEfficiency" Type="Double" />
+          <Property Name="reprocessingStationsTake" Type="Double" />
+          <Property Name="reprocessingHangarFlag" Type="Byte" />
+        </EntityType>
+        <EntityType Name="staStationType">
+          <Key>
+            <PropertyRef Name="stationTypeID" />
+          </Key>
+          <Property Name="stationTypeID" Type="Int32" Nullable="false" />
+          <Property Name="dockEntryX" Type="Double" />
+          <Property Name="dockEntryY" Type="Double" />
+          <Property Name="dockEntryZ" Type="Double" />
+          <Property Name="dockOrientationX" Type="Double" />
+          <Property Name="dockOrientationY" Type="Double" />
+          <Property Name="dockOrientationZ" Type="Double" />
+          <Property Name="operationID" Type="Byte" />
+          <Property Name="officeSlots" Type="Byte" />
+          <Property Name="reprocessingEfficiency" Type="Double" />
+          <Property Name="conquerable" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="translationTable">
+          <Key>
+            <PropertyRef Name="sourceTable" />
+            <PropertyRef Name="translatedKey" />
+          </Key>
+          <Property Name="sourceTable" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="destinationTable" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="translatedKey" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="tcGroupID" Type="Int32" />
+          <Property Name="tcID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="trnTranslationColumn">
+          <Key>
+            <PropertyRef Name="tcID" />
+          </Key>
+          <Property Name="tcGroupID" Type="Int16" />
+          <Property Name="tcID" Type="Int16" Nullable="false" />
+          <Property Name="tableName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="columnName" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="masterID" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="trnTranslationLanguage">
+          <Key>
+            <PropertyRef Name="numericLanguageID" />
+          </Key>
+          <Property Name="numericLanguageID" Type="Int32" Nullable="false" />
+          <Property Name="languageID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="languageName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="trnTranslation">
+          <Key>
+            <PropertyRef Name="tcID" />
+            <PropertyRef Name="keyID" />
+            <PropertyRef Name="languageID" />
+          </Key>
+          <Property Name="tcID" Type="Int16" Nullable="false" />
+          <Property Name="keyID" Type="Int32" Nullable="false" />
+          <Property Name="languageID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="warCombatZone">
+          <Key>
+            <PropertyRef Name="combatZoneID" />
+          </Key>
+          <Property Name="combatZoneID" Type="Int32" Nullable="false" />
+          <Property Name="combatZoneName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="factionID" Type="Int32" />
+          <Property Name="centerSystemID" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="warCombatZoneSystem">
+          <Key>
+            <PropertyRef Name="solarSystemID" />
+          </Key>
+          <Property Name="solarSystemID" Type="Int32" Nullable="false" />
+          <Property Name="combatZoneID" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EveOnlineDBModelStoreContainer" CdmEntityContainer="EveOnlineDBEntities">
+          <EntitySetMapping Name="agtAgents"><EntityTypeMapping TypeName="EveOnlineDBModel.agtAgent"><MappingFragment StoreEntitySet="agtAgents">
+            <ScalarProperty Name="agentID" ColumnName="agentID" />
+            <ScalarProperty Name="divisionID" ColumnName="divisionID" />
+            <ScalarProperty Name="corporationID" ColumnName="corporationID" />
+            <ScalarProperty Name="locationID" ColumnName="locationID" />
+            <ScalarProperty Name="level" ColumnName="level" />
+            <ScalarProperty Name="quality" ColumnName="quality" />
+            <ScalarProperty Name="agentTypeID" ColumnName="agentTypeID" />
+            <ScalarProperty Name="isLocator" ColumnName="isLocator" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="agtAgentTypes"><EntityTypeMapping TypeName="EveOnlineDBModel.agtAgentType"><MappingFragment StoreEntitySet="agtAgentTypes">
+            <ScalarProperty Name="agentTypeID" ColumnName="agentTypeID" />
+            <ScalarProperty Name="agentType" ColumnName="agentType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="agtResearchAgents"><EntityTypeMapping TypeName="EveOnlineDBModel.agtResearchAgent"><MappingFragment StoreEntitySet="agtResearchAgents">
+            <ScalarProperty Name="agentID" ColumnName="agentID" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="chrAncestries"><EntityTypeMapping TypeName="EveOnlineDBModel.chrAncestry"><MappingFragment StoreEntitySet="chrAncestries">
+            <ScalarProperty Name="ancestryID" ColumnName="ancestryID" />
+            <ScalarProperty Name="ancestryName" ColumnName="ancestryName" />
+            <ScalarProperty Name="bloodlineID" ColumnName="bloodlineID" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="perception" ColumnName="perception" />
+            <ScalarProperty Name="willpower" ColumnName="willpower" />
+            <ScalarProperty Name="charisma" ColumnName="charisma" />
+            <ScalarProperty Name="memory" ColumnName="memory" />
+            <ScalarProperty Name="intelligence" ColumnName="intelligence" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="shortDescription" ColumnName="shortDescription" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="chrAttributes"><EntityTypeMapping TypeName="EveOnlineDBModel.chrAttribute"><MappingFragment StoreEntitySet="chrAttributes">
+            <ScalarProperty Name="attributeID" ColumnName="attributeID" />
+            <ScalarProperty Name="attributeName" ColumnName="attributeName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="shortDescription" ColumnName="shortDescription" />
+            <ScalarProperty Name="notes" ColumnName="notes" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="chrBloodlines"><EntityTypeMapping TypeName="EveOnlineDBModel.chrBloodline"><MappingFragment StoreEntitySet="chrBloodlines">
+            <ScalarProperty Name="bloodlineID" ColumnName="bloodlineID" />
+            <ScalarProperty Name="bloodlineName" ColumnName="bloodlineName" />
+            <ScalarProperty Name="raceID" ColumnName="raceID" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="maleDescription" ColumnName="maleDescription" />
+            <ScalarProperty Name="femaleDescription" ColumnName="femaleDescription" />
+            <ScalarProperty Name="shipTypeID" ColumnName="shipTypeID" />
+            <ScalarProperty Name="corporationID" ColumnName="corporationID" />
+            <ScalarProperty Name="perception" ColumnName="perception" />
+            <ScalarProperty Name="willpower" ColumnName="willpower" />
+            <ScalarProperty Name="charisma" ColumnName="charisma" />
+            <ScalarProperty Name="memory" ColumnName="memory" />
+            <ScalarProperty Name="intelligence" ColumnName="intelligence" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="shortDescription" ColumnName="shortDescription" />
+            <ScalarProperty Name="shortMaleDescription" ColumnName="shortMaleDescription" />
+            <ScalarProperty Name="shortFemaleDescription" ColumnName="shortFemaleDescription" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="chrFactions"><EntityTypeMapping TypeName="EveOnlineDBModel.chrFaction"><MappingFragment StoreEntitySet="chrFactions">
+            <ScalarProperty Name="factionID" ColumnName="factionID" />
+            <ScalarProperty Name="factionName" ColumnName="factionName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="raceIDs" ColumnName="raceIDs" />
+            <ScalarProperty Name="solarSystemID" ColumnName="solarSystemID" />
+            <ScalarProperty Name="corporationID" ColumnName="corporationID" />
+            <ScalarProperty Name="sizeFactor" ColumnName="sizeFactor" />
+            <ScalarProperty Name="stationCount" ColumnName="stationCount" />
+            <ScalarProperty Name="stationSystemCount" ColumnName="stationSystemCount" />
+            <ScalarProperty Name="militiaCorporationID" ColumnName="militiaCorporationID" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="chrRaces"><EntityTypeMapping TypeName="EveOnlineDBModel.chrRace"><MappingFragment StoreEntitySet="chrRaces">
+            <ScalarProperty Name="raceID" ColumnName="raceID" />
+            <ScalarProperty Name="raceName" ColumnName="raceName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="shortDescription" ColumnName="shortDescription" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crpActivities"><EntityTypeMapping TypeName="EveOnlineDBModel.crpActivity"><MappingFragment StoreEntitySet="crpActivities">
+            <ScalarProperty Name="activityID" ColumnName="activityID" />
+            <ScalarProperty Name="activityName" ColumnName="activityName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crpNPCCorporationDivisions"><EntityTypeMapping TypeName="EveOnlineDBModel.crpNPCCorporationDivision"><MappingFragment StoreEntitySet="crpNPCCorporationDivisions">
+            <ScalarProperty Name="corporationID" ColumnName="corporationID" />
+            <ScalarProperty Name="divisionID" ColumnName="divisionID" />
+            <ScalarProperty Name="size" ColumnName="size" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crpNPCCorporationResearchFields"><EntityTypeMapping TypeName="EveOnlineDBModel.crpNPCCorporationResearchField"><MappingFragment StoreEntitySet="crpNPCCorporationResearchFields">
+            <ScalarProperty Name="skillID" ColumnName="skillID" />
+            <ScalarProperty Name="corporationID" ColumnName="corporationID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crpNPCCorporations"><EntityTypeMapping TypeName="EveOnlineDBModel.crpNPCCorporation"><MappingFragment StoreEntitySet="crpNPCCorporations">
+            <ScalarProperty Name="corporationID" ColumnName="corporationID" />
+            <ScalarProperty Name="size" ColumnName="size" />
+            <ScalarProperty Name="extent" ColumnName="extent" />
+            <ScalarProperty Name="solarSystemID" ColumnName="solarSystemID" />
+            <ScalarProperty Name="investorID1" ColumnName="investorID1" />
+            <ScalarProperty Name="investorShares1" ColumnName="investorShares1" />
+            <ScalarProperty Name="investorID2" ColumnName="investorID2" />
+            <ScalarProperty Name="investorShares2" ColumnName="investorShares2" />
+            <ScalarProperty Name="investorID3" ColumnName="investorID3" />
+            <ScalarProperty Name="investorShares3" ColumnName="investorShares3" />
+            <ScalarProperty Name="investorID4" ColumnName="investorID4" />
+            <ScalarProperty Name="investorShares4" ColumnName="investorShares4" />
+            <ScalarProperty Name="friendID" ColumnName="friendID" />
+            <ScalarProperty Name="enemyID" ColumnName="enemyID" />
+            <ScalarProperty Name="publicShares" ColumnName="publicShares" />
+            <ScalarProperty Name="initialPrice" ColumnName="initialPrice" />
+            <ScalarProperty Name="minSecurity" ColumnName="minSecurity" />
+            <ScalarProperty Name="scattered" ColumnName="scattered" />
+            <ScalarProperty Name="fringe" ColumnName="fringe" />
+            <ScalarProperty Name="corridor" ColumnName="corridor" />
+            <ScalarProperty Name="hub" ColumnName="hub" />
+            <ScalarProperty Name="border" ColumnName="border" />
+            <ScalarProperty Name="factionID" ColumnName="factionID" />
+            <ScalarProperty Name="sizeFactor" ColumnName="sizeFactor" />
+            <ScalarProperty Name="stationCount" ColumnName="stationCount" />
+            <ScalarProperty Name="stationSystemCount" ColumnName="stationSystemCount" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crpNPCCorporationTrades"><EntityTypeMapping TypeName="EveOnlineDBModel.crpNPCCorporationTrade"><MappingFragment StoreEntitySet="crpNPCCorporationTrades">
+            <ScalarProperty Name="corporationID" ColumnName="corporationID" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crpNPCDivisions"><EntityTypeMapping TypeName="EveOnlineDBModel.crpNPCDivision"><MappingFragment StoreEntitySet="crpNPCDivisions">
+            <ScalarProperty Name="divisionID" ColumnName="divisionID" />
+            <ScalarProperty Name="divisionName" ColumnName="divisionName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="leaderType" ColumnName="leaderType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crtCategories"><EntityTypeMapping TypeName="EveOnlineDBModel.crtCategory"><MappingFragment StoreEntitySet="crtCategories">
+            <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crtCertificates"><EntityTypeMapping TypeName="EveOnlineDBModel.crtCertificate"><MappingFragment StoreEntitySet="crtCertificates">
+            <ScalarProperty Name="certificateID" ColumnName="certificateID" />
+            <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+            <ScalarProperty Name="classID" ColumnName="classID" />
+            <ScalarProperty Name="grade" ColumnName="grade" />
+            <ScalarProperty Name="corpID" ColumnName="corpID" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="description" ColumnName="description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crtClasses"><EntityTypeMapping TypeName="EveOnlineDBModel.crtClass"><MappingFragment StoreEntitySet="crtClasses">
+            <ScalarProperty Name="classID" ColumnName="classID" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="className" ColumnName="className" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crtRecommendations"><EntityTypeMapping TypeName="EveOnlineDBModel.crtRecommendation"><MappingFragment StoreEntitySet="crtRecommendations">
+            <ScalarProperty Name="recommendationID" ColumnName="recommendationID" />
+            <ScalarProperty Name="shipTypeID" ColumnName="shipTypeID" />
+            <ScalarProperty Name="certificateID" ColumnName="certificateID" />
+            <ScalarProperty Name="recommendationLevel" ColumnName="recommendationLevel" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="crtRelationships"><EntityTypeMapping TypeName="EveOnlineDBModel.crtRelationship"><MappingFragment StoreEntitySet="crtRelationships">
+            <ScalarProperty Name="relationshipID" ColumnName="relationshipID" />
+            <ScalarProperty Name="parentID" ColumnName="parentID" />
+            <ScalarProperty Name="parentTypeID" ColumnName="parentTypeID" />
+            <ScalarProperty Name="parentLevel" ColumnName="parentLevel" />
+            <ScalarProperty Name="childID" ColumnName="childID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dgmAttributeCategories"><EntityTypeMapping TypeName="EveOnlineDBModel.dgmAttributeCategory"><MappingFragment StoreEntitySet="dgmAttributeCategories">
+            <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+            <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+            <ScalarProperty Name="categoryDescription" ColumnName="categoryDescription" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dgmAttributeTypes"><EntityTypeMapping TypeName="EveOnlineDBModel.dgmAttributeType"><MappingFragment StoreEntitySet="dgmAttributeTypes">
+            <ScalarProperty Name="attributeID" ColumnName="attributeID" />
+            <ScalarProperty Name="attributeName" ColumnName="attributeName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="defaultValue" ColumnName="defaultValue" />
+            <ScalarProperty Name="published" ColumnName="published" />
+            <ScalarProperty Name="displayName" ColumnName="displayName" />
+            <ScalarProperty Name="unitID" ColumnName="unitID" />
+            <ScalarProperty Name="stackable" ColumnName="stackable" />
+            <ScalarProperty Name="highIsGood" ColumnName="highIsGood" />
+            <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dgmEffects"><EntityTypeMapping TypeName="EveOnlineDBModel.dgmEffect"><MappingFragment StoreEntitySet="dgmEffects">
+            <ScalarProperty Name="effectID" ColumnName="effectID" />
+            <ScalarProperty Name="effectName" ColumnName="effectName" />
+            <ScalarProperty Name="effectCategory" ColumnName="effectCategory" />
+            <ScalarProperty Name="preExpression" ColumnName="preExpression" />
+            <ScalarProperty Name="postExpression" ColumnName="postExpression" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="guid" ColumnName="guid" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="isOffensive" ColumnName="isOffensive" />
+            <ScalarProperty Name="isAssistance" ColumnName="isAssistance" />
+            <ScalarProperty Name="durationAttributeID" ColumnName="durationAttributeID" />
+            <ScalarProperty Name="trackingSpeedAttributeID" ColumnName="trackingSpeedAttributeID" />
+            <ScalarProperty Name="dischargeAttributeID" ColumnName="dischargeAttributeID" />
+            <ScalarProperty Name="rangeAttributeID" ColumnName="rangeAttributeID" />
+            <ScalarProperty Name="falloffAttributeID" ColumnName="falloffAttributeID" />
+            <ScalarProperty Name="disallowAutoRepeat" ColumnName="disallowAutoRepeat" />
+            <ScalarProperty Name="published" ColumnName="published" />
+            <ScalarProperty Name="displayName" ColumnName="displayName" />
+            <ScalarProperty Name="isWarpSafe" ColumnName="isWarpSafe" />
+            <ScalarProperty Name="rangeChance" ColumnName="rangeChance" />
+            <ScalarProperty Name="electronicChance" ColumnName="electronicChance" />
+            <ScalarProperty Name="propulsionChance" ColumnName="propulsionChance" />
+            <ScalarProperty Name="distribution" ColumnName="distribution" />
+            <ScalarProperty Name="sfxName" ColumnName="sfxName" />
+            <ScalarProperty Name="npcUsageChanceAttributeID" ColumnName="npcUsageChanceAttributeID" />
+            <ScalarProperty Name="npcActivationChanceAttributeID" ColumnName="npcActivationChanceAttributeID" />
+            <ScalarProperty Name="fittingUsageChanceAttributeID" ColumnName="fittingUsageChanceAttributeID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dgmTypeAttributes"><EntityTypeMapping TypeName="EveOnlineDBModel.dgmTypeAttribute"><MappingFragment StoreEntitySet="dgmTypeAttributes">
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="attributeID" ColumnName="attributeID" />
+            <ScalarProperty Name="valueInt" ColumnName="valueInt" />
+            <ScalarProperty Name="valueFloat" ColumnName="valueFloat" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dgmTypeEffects"><EntityTypeMapping TypeName="EveOnlineDBModel.dgmTypeEffect"><MappingFragment StoreEntitySet="dgmTypeEffects">
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="effectID" ColumnName="effectID" />
+            <ScalarProperty Name="isDefault" ColumnName="isDefault" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="eveGraphics"><EntityTypeMapping TypeName="EveOnlineDBModel.eveGraphic"><MappingFragment StoreEntitySet="eveGraphics">
+            <ScalarProperty Name="graphicID" ColumnName="graphicID" />
+            <ScalarProperty Name="graphicFile" ColumnName="graphicFile" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="obsolete" ColumnName="obsolete" />
+            <ScalarProperty Name="graphicType" ColumnName="graphicType" />
+            <ScalarProperty Name="collidable" ColumnName="collidable" />
+            <ScalarProperty Name="explosionID" ColumnName="explosionID" />
+            <ScalarProperty Name="directoryID" ColumnName="directoryID" />
+            <ScalarProperty Name="graphicName" ColumnName="graphicName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="eveIcons"><EntityTypeMapping TypeName="EveOnlineDBModel.eveIcon"><MappingFragment StoreEntitySet="eveIcons">
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="iconFile" ColumnName="iconFile" />
+            <ScalarProperty Name="description" ColumnName="description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="eveUnits"><EntityTypeMapping TypeName="EveOnlineDBModel.eveUnit"><MappingFragment StoreEntitySet="eveUnits">
+            <ScalarProperty Name="unitID" ColumnName="unitID" />
+            <ScalarProperty Name="unitName" ColumnName="unitName" />
+            <ScalarProperty Name="displayName" ColumnName="displayName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invBlueprintTypes"><EntityTypeMapping TypeName="EveOnlineDBModel.invBlueprintType"><MappingFragment StoreEntitySet="invBlueprintTypes">
+            <ScalarProperty Name="blueprintTypeID" ColumnName="blueprintTypeID" />
+            <ScalarProperty Name="parentBlueprintTypeID" ColumnName="parentBlueprintTypeID" />
+            <ScalarProperty Name="productTypeID" ColumnName="productTypeID" />
+            <ScalarProperty Name="productionTime" ColumnName="productionTime" />
+            <ScalarProperty Name="techLevel" ColumnName="techLevel" />
+            <ScalarProperty Name="researchProductivityTime" ColumnName="researchProductivityTime" />
+            <ScalarProperty Name="researchMaterialTime" ColumnName="researchMaterialTime" />
+            <ScalarProperty Name="researchCopyTime" ColumnName="researchCopyTime" />
+            <ScalarProperty Name="researchTechTime" ColumnName="researchTechTime" />
+            <ScalarProperty Name="productivityModifier" ColumnName="productivityModifier" />
+            <ScalarProperty Name="materialModifier" ColumnName="materialModifier" />
+            <ScalarProperty Name="wasteFactor" ColumnName="wasteFactor" />
+            <ScalarProperty Name="maxProductionLimit" ColumnName="maxProductionLimit" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invCategories"><EntityTypeMapping TypeName="EveOnlineDBModel.invCategory"><MappingFragment StoreEntitySet="invCategories">
+            <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+            <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="published" ColumnName="published" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invContrabandTypes"><EntityTypeMapping TypeName="EveOnlineDBModel.invContrabandType"><MappingFragment StoreEntitySet="invContrabandTypes">
+            <ScalarProperty Name="factionID" ColumnName="factionID" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="standingLoss" ColumnName="standingLoss" />
+            <ScalarProperty Name="confiscateMinSec" ColumnName="confiscateMinSec" />
+            <ScalarProperty Name="fineByValue" ColumnName="fineByValue" />
+            <ScalarProperty Name="attackMinSec" ColumnName="attackMinSec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invControlTowerResourcePurposes"><EntityTypeMapping TypeName="EveOnlineDBModel.invControlTowerResourcePurpos"><MappingFragment StoreEntitySet="invControlTowerResourcePurposes">
+            <ScalarProperty Name="purpose" ColumnName="purpose" />
+            <ScalarProperty Name="purposeText" ColumnName="purposeText" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invControlTowerResources"><EntityTypeMapping TypeName="EveOnlineDBModel.invControlTowerResource"><MappingFragment StoreEntitySet="invControlTowerResources">
+            <ScalarProperty Name="controlTowerTypeID" ColumnName="controlTowerTypeID" />
+            <ScalarProperty Name="resourceTypeID" ColumnName="resourceTypeID" />
+            <ScalarProperty Name="purpose" ColumnName="purpose" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+            <ScalarProperty Name="minSecurityLevel" ColumnName="minSecurityLevel" />
+            <ScalarProperty Name="factionID" ColumnName="factionID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invFlags"><EntityTypeMapping TypeName="EveOnlineDBModel.invFlag"><MappingFragment StoreEntitySet="invFlags">
+            <ScalarProperty Name="flagID" ColumnName="flagID" />
+            <ScalarProperty Name="flagName" ColumnName="flagName" />
+            <ScalarProperty Name="flagText" ColumnName="flagText" />
+            <ScalarProperty Name="orderID" ColumnName="orderID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invGroups"><EntityTypeMapping TypeName="EveOnlineDBModel.invGroup"><MappingFragment StoreEntitySet="invGroups">
+            <ScalarProperty Name="groupID" ColumnName="groupID" />
+            <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+            <ScalarProperty Name="groupName" ColumnName="groupName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="useBasePrice" ColumnName="useBasePrice" />
+            <ScalarProperty Name="allowManufacture" ColumnName="allowManufacture" />
+            <ScalarProperty Name="allowRecycler" ColumnName="allowRecycler" />
+            <ScalarProperty Name="anchored" ColumnName="anchored" />
+            <ScalarProperty Name="anchorable" ColumnName="anchorable" />
+            <ScalarProperty Name="fittableNonSingleton" ColumnName="fittableNonSingleton" />
+            <ScalarProperty Name="published" ColumnName="published" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invItems"><EntityTypeMapping TypeName="EveOnlineDBModel.invItem"><MappingFragment StoreEntitySet="invItems">
+            <ScalarProperty Name="itemID" ColumnName="itemID" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="ownerID" ColumnName="ownerID" />
+            <ScalarProperty Name="locationID" ColumnName="locationID" />
+            <ScalarProperty Name="flagID" ColumnName="flagID" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invMarketGroups"><EntityTypeMapping TypeName="EveOnlineDBModel.invMarketGroup"><MappingFragment StoreEntitySet="invMarketGroups">
+            <ScalarProperty Name="marketGroupID" ColumnName="marketGroupID" />
+            <ScalarProperty Name="parentGroupID" ColumnName="parentGroupID" />
+            <ScalarProperty Name="marketGroupName" ColumnName="marketGroupName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="hasTypes" ColumnName="hasTypes" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invMetaGroups"><EntityTypeMapping TypeName="EveOnlineDBModel.invMetaGroup"><MappingFragment StoreEntitySet="invMetaGroups">
+            <ScalarProperty Name="metaGroupID" ColumnName="metaGroupID" />
+            <ScalarProperty Name="metaGroupName" ColumnName="metaGroupName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invMetaTypes"><EntityTypeMapping TypeName="EveOnlineDBModel.invMetaType"><MappingFragment StoreEntitySet="invMetaTypes">
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="parentTypeID" ColumnName="parentTypeID" />
+            <ScalarProperty Name="metaGroupID" ColumnName="metaGroupID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invNames"><EntityTypeMapping TypeName="EveOnlineDBModel.invName"><MappingFragment StoreEntitySet="invNames">
+            <ScalarProperty Name="itemID" ColumnName="itemID" />
+            <ScalarProperty Name="itemName" ColumnName="itemName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invPositions"><EntityTypeMapping TypeName="EveOnlineDBModel.invPosition"><MappingFragment StoreEntitySet="invPositions">
+            <ScalarProperty Name="itemID" ColumnName="itemID" />
+            <ScalarProperty Name="x" ColumnName="x" />
+            <ScalarProperty Name="y" ColumnName="y" />
+            <ScalarProperty Name="z" ColumnName="z" />
+            <ScalarProperty Name="yaw" ColumnName="yaw" />
+            <ScalarProperty Name="pitch" ColumnName="pitch" />
+            <ScalarProperty Name="roll" ColumnName="roll" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invTypeMaterials"><EntityTypeMapping TypeName="EveOnlineDBModel.invTypeMaterial"><MappingFragment StoreEntitySet="invTypeMaterials">
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="materialTypeID" ColumnName="materialTypeID" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invTypeReactions"><EntityTypeMapping TypeName="EveOnlineDBModel.invTypeReaction"><MappingFragment StoreEntitySet="invTypeReactions">
+            <ScalarProperty Name="reactionTypeID" ColumnName="reactionTypeID" />
+            <ScalarProperty Name="input" ColumnName="input" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invTypes"><EntityTypeMapping TypeName="EveOnlineDBModel.invType"><MappingFragment StoreEntitySet="invTypes">
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="groupID" ColumnName="groupID" />
+            <ScalarProperty Name="typeName" ColumnName="typeName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="graphicID" ColumnName="graphicID" />
+            <ScalarProperty Name="radius" ColumnName="radius" />
+            <ScalarProperty Name="mass" ColumnName="mass" />
+            <ScalarProperty Name="volume" ColumnName="volume" />
+            <ScalarProperty Name="capacity" ColumnName="capacity" />
+            <ScalarProperty Name="portionSize" ColumnName="portionSize" />
+            <ScalarProperty Name="raceID" ColumnName="raceID" />
+            <ScalarProperty Name="basePrice" ColumnName="basePrice" />
+            <ScalarProperty Name="published" ColumnName="published" />
+            <ScalarProperty Name="marketGroupID" ColumnName="marketGroupID" />
+            <ScalarProperty Name="chanceOfDuplicating" ColumnName="chanceOfDuplicating" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="invUniqueNames"><EntityTypeMapping TypeName="EveOnlineDBModel.invUniqueName"><MappingFragment StoreEntitySet="invUniqueNames">
+            <ScalarProperty Name="itemID" ColumnName="itemID" />
+            <ScalarProperty Name="itemName" ColumnName="itemName" />
+            <ScalarProperty Name="groupID" ColumnName="groupID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapCelestialStatistics"><EntityTypeMapping TypeName="EveOnlineDBModel.mapCelestialStatistic"><MappingFragment StoreEntitySet="mapCelestialStatistics">
+            <ScalarProperty Name="celestialID" ColumnName="celestialID" />
+            <ScalarProperty Name="temperature" ColumnName="temperature" />
+            <ScalarProperty Name="spectralClass" ColumnName="spectralClass" />
+            <ScalarProperty Name="luminosity" ColumnName="luminosity" />
+            <ScalarProperty Name="age" ColumnName="age" />
+            <ScalarProperty Name="life" ColumnName="life" />
+            <ScalarProperty Name="orbitRadius" ColumnName="orbitRadius" />
+            <ScalarProperty Name="eccentricity" ColumnName="eccentricity" />
+            <ScalarProperty Name="massDust" ColumnName="massDust" />
+            <ScalarProperty Name="massGas" ColumnName="massGas" />
+            <ScalarProperty Name="fragmented" ColumnName="fragmented" />
+            <ScalarProperty Name="density" ColumnName="density" />
+            <ScalarProperty Name="surfaceGravity" ColumnName="surfaceGravity" />
+            <ScalarProperty Name="escapeVelocity" ColumnName="escapeVelocity" />
+            <ScalarProperty Name="orbitPeriod" ColumnName="orbitPeriod" />
+            <ScalarProperty Name="rotationRate" ColumnName="rotationRate" />
+            <ScalarProperty Name="locked" ColumnName="locked" />
+            <ScalarProperty Name="pressure" ColumnName="pressure" />
+            <ScalarProperty Name="radius" ColumnName="radius" />
+            <ScalarProperty Name="mass" ColumnName="mass" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapConstellationJumps"><EntityTypeMapping TypeName="EveOnlineDBModel.mapConstellationJump"><MappingFragment StoreEntitySet="mapConstellationJumps">
+            <ScalarProperty Name="fromRegionID" ColumnName="fromRegionID" />
+            <ScalarProperty Name="fromConstellationID" ColumnName="fromConstellationID" />
+            <ScalarProperty Name="toConstellationID" ColumnName="toConstellationID" />
+            <ScalarProperty Name="toRegionID" ColumnName="toRegionID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapConstellations"><EntityTypeMapping TypeName="EveOnlineDBModel.mapConstellation"><MappingFragment StoreEntitySet="mapConstellations">
+            <ScalarProperty Name="regionID" ColumnName="regionID" />
+            <ScalarProperty Name="constellationID" ColumnName="constellationID" />
+            <ScalarProperty Name="constellationName" ColumnName="constellationName" />
+            <ScalarProperty Name="x" ColumnName="x" />
+            <ScalarProperty Name="y" ColumnName="y" />
+            <ScalarProperty Name="z" ColumnName="z" />
+            <ScalarProperty Name="xMin" ColumnName="xMin" />
+            <ScalarProperty Name="xMax" ColumnName="xMax" />
+            <ScalarProperty Name="yMin" ColumnName="yMin" />
+            <ScalarProperty Name="yMax" ColumnName="yMax" />
+            <ScalarProperty Name="zMin" ColumnName="zMin" />
+            <ScalarProperty Name="zMax" ColumnName="zMax" />
+            <ScalarProperty Name="factionID" ColumnName="factionID" />
+            <ScalarProperty Name="radius" ColumnName="radius" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapDenormalizes"><EntityTypeMapping TypeName="EveOnlineDBModel.mapDenormalize"><MappingFragment StoreEntitySet="mapDenormalize">
+            <ScalarProperty Name="itemID" ColumnName="itemID" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="groupID" ColumnName="groupID" />
+            <ScalarProperty Name="solarSystemID" ColumnName="solarSystemID" />
+            <ScalarProperty Name="constellationID" ColumnName="constellationID" />
+            <ScalarProperty Name="regionID" ColumnName="regionID" />
+            <ScalarProperty Name="orbitID" ColumnName="orbitID" />
+            <ScalarProperty Name="x" ColumnName="x" />
+            <ScalarProperty Name="y" ColumnName="y" />
+            <ScalarProperty Name="z" ColumnName="z" />
+            <ScalarProperty Name="radius" ColumnName="radius" />
+            <ScalarProperty Name="itemName" ColumnName="itemName" />
+            <ScalarProperty Name="security" ColumnName="security" />
+            <ScalarProperty Name="celestialIndex" ColumnName="celestialIndex" />
+            <ScalarProperty Name="orbitIndex" ColumnName="orbitIndex" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapJumps"><EntityTypeMapping TypeName="EveOnlineDBModel.mapJump"><MappingFragment StoreEntitySet="mapJumps">
+            <ScalarProperty Name="stargateID" ColumnName="stargateID" />
+            <ScalarProperty Name="celestialID" ColumnName="celestialID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapLandmarks"><EntityTypeMapping TypeName="EveOnlineDBModel.mapLandmark"><MappingFragment StoreEntitySet="mapLandmarks">
+            <ScalarProperty Name="landmarkID" ColumnName="landmarkID" />
+            <ScalarProperty Name="landmarkName" ColumnName="landmarkName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="locationID" ColumnName="locationID" />
+            <ScalarProperty Name="x" ColumnName="x" />
+            <ScalarProperty Name="y" ColumnName="y" />
+            <ScalarProperty Name="z" ColumnName="z" />
+            <ScalarProperty Name="radius" ColumnName="radius" />
+            <ScalarProperty Name="iconID" ColumnName="iconID" />
+            <ScalarProperty Name="importance" ColumnName="importance" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapLocationScenes"><EntityTypeMapping TypeName="EveOnlineDBModel.mapLocationScene"><MappingFragment StoreEntitySet="mapLocationScenes">
+            <ScalarProperty Name="locationID" ColumnName="locationID" />
+            <ScalarProperty Name="graphicID" ColumnName="graphicID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapLocationWormholeClasses"><EntityTypeMapping TypeName="EveOnlineDBModel.mapLocationWormholeClass"><MappingFragment StoreEntitySet="mapLocationWormholeClasses">
+            <ScalarProperty Name="locationID" ColumnName="locationID" />
+            <ScalarProperty Name="wormholeClassID" ColumnName="wormholeClassID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapRegionJumps"><EntityTypeMapping TypeName="EveOnlineDBModel.mapRegionJump"><MappingFragment StoreEntitySet="mapRegionJumps">
+            <ScalarProperty Name="fromRegionID" ColumnName="fromRegionID" />
+            <ScalarProperty Name="toRegionID" ColumnName="toRegionID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapRegions"><EntityTypeMapping TypeName="EveOnlineDBModel.mapRegion"><MappingFragment StoreEntitySet="mapRegions">
+            <ScalarProperty Name="regionID" ColumnName="regionID" />
+            <ScalarProperty Name="regionName" ColumnName="regionName" />
+            <ScalarProperty Name="x" ColumnName="x" />
+            <ScalarProperty Name="y" ColumnName="y" />
+            <ScalarProperty Name="z" ColumnName="z" />
+            <ScalarProperty Name="xMin" ColumnName="xMin" />
+            <ScalarProperty Name="xMax" ColumnName="xMax" />
+            <ScalarProperty Name="yMin" ColumnName="yMin" />
+            <ScalarProperty Name="yMax" ColumnName="yMax" />
+            <ScalarProperty Name="zMin" ColumnName="zMin" />
+            <ScalarProperty Name="zMax" ColumnName="zMax" />
+            <ScalarProperty Name="factionID" ColumnName="factionID" />
+            <ScalarProperty Name="radius" ColumnName="radius" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapSolarSystemJumps"><EntityTypeMapping TypeName="EveOnlineDBModel.mapSolarSystemJump"><MappingFragment StoreEntitySet="mapSolarSystemJumps">
+            <ScalarProperty Name="fromRegionID" ColumnName="fromRegionID" />
+            <ScalarProperty Name="fromConstellationID" ColumnName="fromConstellationID" />
+            <ScalarProperty Name="fromSolarSystemID" ColumnName="fromSolarSystemID" />
+            <ScalarProperty Name="toSolarSystemID" ColumnName="toSolarSystemID" />
+            <ScalarProperty Name="toConstellationID" ColumnName="toConstellationID" />
+            <ScalarProperty Name="toRegionID" ColumnName="toRegionID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapSolarSystems"><EntityTypeMapping TypeName="EveOnlineDBModel.mapSolarSystem"><MappingFragment StoreEntitySet="mapSolarSystems">
+            <ScalarProperty Name="regionID" ColumnName="regionID" />
+            <ScalarProperty Name="constellationID" ColumnName="constellationID" />
+            <ScalarProperty Name="solarSystemID" ColumnName="solarSystemID" />
+            <ScalarProperty Name="solarSystemName" ColumnName="solarSystemName" />
+            <ScalarProperty Name="x" ColumnName="x" />
+            <ScalarProperty Name="y" ColumnName="y" />
+            <ScalarProperty Name="z" ColumnName="z" />
+            <ScalarProperty Name="xMin" ColumnName="xMin" />
+            <ScalarProperty Name="xMax" ColumnName="xMax" />
+            <ScalarProperty Name="yMin" ColumnName="yMin" />
+            <ScalarProperty Name="yMax" ColumnName="yMax" />
+            <ScalarProperty Name="zMin" ColumnName="zMin" />
+            <ScalarProperty Name="zMax" ColumnName="zMax" />
+            <ScalarProperty Name="luminosity" ColumnName="luminosity" />
+            <ScalarProperty Name="border" ColumnName="border" />
+            <ScalarProperty Name="fringe" ColumnName="fringe" />
+            <ScalarProperty Name="corridor" ColumnName="corridor" />
+            <ScalarProperty Name="hub" ColumnName="hub" />
+            <ScalarProperty Name="international" ColumnName="international" />
+            <ScalarProperty Name="regional" ColumnName="regional" />
+            <ScalarProperty Name="constellation" ColumnName="constellation" />
+            <ScalarProperty Name="security" ColumnName="security" />
+            <ScalarProperty Name="factionID" ColumnName="factionID" />
+            <ScalarProperty Name="radius" ColumnName="radius" />
+            <ScalarProperty Name="sunTypeID" ColumnName="sunTypeID" />
+            <ScalarProperty Name="securityClass" ColumnName="securityClass" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mapUniverses"><EntityTypeMapping TypeName="EveOnlineDBModel.mapUniverse"><MappingFragment StoreEntitySet="mapUniverse">
+            <ScalarProperty Name="universeID" ColumnName="universeID" />
+            <ScalarProperty Name="universeName" ColumnName="universeName" />
+            <ScalarProperty Name="x" ColumnName="x" />
+            <ScalarProperty Name="y" ColumnName="y" />
+            <ScalarProperty Name="z" ColumnName="z" />
+            <ScalarProperty Name="xMin" ColumnName="xMin" />
+            <ScalarProperty Name="xMax" ColumnName="xMax" />
+            <ScalarProperty Name="yMin" ColumnName="yMin" />
+            <ScalarProperty Name="yMax" ColumnName="yMax" />
+            <ScalarProperty Name="zMin" ColumnName="zMin" />
+            <ScalarProperty Name="zMax" ColumnName="zMax" />
+            <ScalarProperty Name="radius" ColumnName="radius" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="planetSchematics"><EntityTypeMapping TypeName="EveOnlineDBModel.planetSchematic"><MappingFragment StoreEntitySet="planetSchematics">
+            <ScalarProperty Name="schematicID" ColumnName="schematicID" />
+            <ScalarProperty Name="schematicName" ColumnName="schematicName" />
+            <ScalarProperty Name="cycleTime" ColumnName="cycleTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="planetSchematicsPinMaps"><EntityTypeMapping TypeName="EveOnlineDBModel.planetSchematicsPinMap"><MappingFragment StoreEntitySet="planetSchematicsPinMap">
+            <ScalarProperty Name="schematicID" ColumnName="schematicID" />
+            <ScalarProperty Name="pinTypeID" ColumnName="pinTypeID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="planetSchematicsTypeMaps"><EntityTypeMapping TypeName="EveOnlineDBModel.planetSchematicsTypeMap"><MappingFragment StoreEntitySet="planetSchematicsTypeMap">
+            <ScalarProperty Name="schematicID" ColumnName="schematicID" />
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+            <ScalarProperty Name="isInput" ColumnName="isInput" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ramActivities"><EntityTypeMapping TypeName="EveOnlineDBModel.ramActivity"><MappingFragment StoreEntitySet="ramActivities">
+            <ScalarProperty Name="activityID" ColumnName="activityID" />
+            <ScalarProperty Name="activityName" ColumnName="activityName" />
+            <ScalarProperty Name="iconNo" ColumnName="iconNo" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="published" ColumnName="published" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ramAssemblyLines"><EntityTypeMapping TypeName="EveOnlineDBModel.ramAssemblyLine"><MappingFragment StoreEntitySet="ramAssemblyLines">
+            <ScalarProperty Name="assemblyLineID" ColumnName="assemblyLineID" />
+            <ScalarProperty Name="assemblyLineTypeID" ColumnName="assemblyLineTypeID" />
+            <ScalarProperty Name="containerID" ColumnName="containerID" />
+            <ScalarProperty Name="nextFreeTime" ColumnName="nextFreeTime" />
+            <ScalarProperty Name="UIGroupingID" ColumnName="UIGroupingID" />
+            <ScalarProperty Name="costInstall" ColumnName="costInstall" />
+            <ScalarProperty Name="costPerHour" ColumnName="costPerHour" />
+            <ScalarProperty Name="restrictionMask" ColumnName="restrictionMask" />
+            <ScalarProperty Name="discountPerGoodStandingPoint" ColumnName="discountPerGoodStandingPoint" />
+            <ScalarProperty Name="surchargePerBadStandingPoint" ColumnName="surchargePerBadStandingPoint" />
+            <ScalarProperty Name="minimumStanding" ColumnName="minimumStanding" />
+            <ScalarProperty Name="minimumCharSecurity" ColumnName="minimumCharSecurity" />
+            <ScalarProperty Name="minimumCorpSecurity" ColumnName="minimumCorpSecurity" />
+            <ScalarProperty Name="maximumCharSecurity" ColumnName="maximumCharSecurity" />
+            <ScalarProperty Name="maximumCorpSecurity" ColumnName="maximumCorpSecurity" />
+            <ScalarProperty Name="ownerID" ColumnName="ownerID" />
+            <ScalarProperty Name="activityID" ColumnName="activityID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ramAssemblyLineStations"><EntityTypeMapping TypeName="EveOnlineDBModel.ramAssemblyLineStation"><MappingFragment StoreEntitySet="ramAssemblyLineStations">
+            <ScalarProperty Name="stationID" ColumnName="stationID" />
+            <ScalarProperty Name="assemblyLineTypeID" ColumnName="assemblyLineTypeID" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+            <ScalarProperty Name="stationTypeID" ColumnName="stationTypeID" />
+            <ScalarProperty Name="ownerID" ColumnName="ownerID" />
+            <ScalarProperty Name="solarSystemID" ColumnName="solarSystemID" />
+            <ScalarProperty Name="regionID" ColumnName="regionID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ramAssemblyLineTypeDetailPerCategories"><EntityTypeMapping TypeName="EveOnlineDBModel.ramAssemblyLineTypeDetailPerCategory"><MappingFragment StoreEntitySet="ramAssemblyLineTypeDetailPerCategory">
+            <ScalarProperty Name="assemblyLineTypeID" ColumnName="assemblyLineTypeID" />
+            <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+            <ScalarProperty Name="timeMultiplier" ColumnName="timeMultiplier" />
+            <ScalarProperty Name="materialMultiplier" ColumnName="materialMultiplier" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ramAssemblyLineTypeDetailPerGroups"><EntityTypeMapping TypeName="EveOnlineDBModel.ramAssemblyLineTypeDetailPerGroup"><MappingFragment StoreEntitySet="ramAssemblyLineTypeDetailPerGroup">
+            <ScalarProperty Name="assemblyLineTypeID" ColumnName="assemblyLineTypeID" />
+            <ScalarProperty Name="groupID" ColumnName="groupID" />
+            <ScalarProperty Name="timeMultiplier" ColumnName="timeMultiplier" />
+            <ScalarProperty Name="materialMultiplier" ColumnName="materialMultiplier" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ramAssemblyLineTypes"><EntityTypeMapping TypeName="EveOnlineDBModel.ramAssemblyLineType"><MappingFragment StoreEntitySet="ramAssemblyLineTypes">
+            <ScalarProperty Name="assemblyLineTypeID" ColumnName="assemblyLineTypeID" />
+            <ScalarProperty Name="assemblyLineTypeName" ColumnName="assemblyLineTypeName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="baseTimeMultiplier" ColumnName="baseTimeMultiplier" />
+            <ScalarProperty Name="baseMaterialMultiplier" ColumnName="baseMaterialMultiplier" />
+            <ScalarProperty Name="volume" ColumnName="volume" />
+            <ScalarProperty Name="activityID" ColumnName="activityID" />
+            <ScalarProperty Name="minCostPerHour" ColumnName="minCostPerHour" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ramInstallationTypeContents"><EntityTypeMapping TypeName="EveOnlineDBModel.ramInstallationTypeContent"><MappingFragment StoreEntitySet="ramInstallationTypeContents">
+            <ScalarProperty Name="installationTypeID" ColumnName="installationTypeID" />
+            <ScalarProperty Name="assemblyLineTypeID" ColumnName="assemblyLineTypeID" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ramTypeRequirements"><EntityTypeMapping TypeName="EveOnlineDBModel.ramTypeRequirement"><MappingFragment StoreEntitySet="ramTypeRequirements">
+            <ScalarProperty Name="typeID" ColumnName="typeID" />
+            <ScalarProperty Name="activityID" ColumnName="activityID" />
+            <ScalarProperty Name="requiredTypeID" ColumnName="requiredTypeID" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+            <ScalarProperty Name="damagePerJob" ColumnName="damagePerJob" />
+            <ScalarProperty Name="recycle" ColumnName="recycle" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="staOperations"><EntityTypeMapping TypeName="EveOnlineDBModel.staOperation"><MappingFragment StoreEntitySet="staOperations">
+            <ScalarProperty Name="activityID" ColumnName="activityID" />
+            <ScalarProperty Name="operationID" ColumnName="operationID" />
+            <ScalarProperty Name="operationName" ColumnName="operationName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="fringe" ColumnName="fringe" />
+            <ScalarProperty Name="corridor" ColumnName="corridor" />
+            <ScalarProperty Name="hub" ColumnName="hub" />
+            <ScalarProperty Name="border" ColumnName="border" />
+            <ScalarProperty Name="ratio" ColumnName="ratio" />
+            <ScalarProperty Name="caldariStationTypeID" ColumnName="caldariStationTypeID" />
+            <ScalarProperty Name="minmatarStationTypeID" ColumnName="minmatarStationTypeID" />
+            <ScalarProperty Name="amarrStationTypeID" ColumnName="amarrStationTypeID" />
+            <ScalarProperty Name="gallenteStationTypeID" ColumnName="gallenteStationTypeID" />
+            <ScalarProperty Name="joveStationTypeID" ColumnName="joveStationTypeID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="staOperationServices"><EntityTypeMapping TypeName="EveOnlineDBModel.staOperationService"><MappingFragment StoreEntitySet="staOperationServices">
+            <ScalarProperty Name="operationID" ColumnName="operationID" />
+            <ScalarProperty Name="serviceID" ColumnName="serviceID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="staServices"><EntityTypeMapping TypeName="EveOnlineDBModel.staService"><MappingFragment StoreEntitySet="staServices">
+            <ScalarProperty Name="serviceID" ColumnName="serviceID" />
+            <ScalarProperty Name="serviceName" ColumnName="serviceName" />
+            <ScalarProperty Name="description" ColumnName="description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="staStations"><EntityTypeMapping TypeName="EveOnlineDBModel.staStation"><MappingFragment StoreEntitySet="staStations">
+            <ScalarProperty Name="stationID" ColumnName="stationID" />
+            <ScalarProperty Name="security" ColumnName="security" />
+            <ScalarProperty Name="dockingCostPerVolume" ColumnName="dockingCostPerVolume" />
+            <ScalarProperty Name="maxShipVolumeDockable" ColumnName="maxShipVolumeDockable" />
+            <ScalarProperty Name="officeRentalCost" ColumnName="officeRentalCost" />
+            <ScalarProperty Name="operationID" ColumnName="operationID" />
+            <ScalarProperty Name="stationTypeID" ColumnName="stationTypeID" />
+            <ScalarProperty Name="corporationID" ColumnName="corporationID" />
+            <ScalarProperty Name="solarSystemID" ColumnName="solarSystemID" />
+            <ScalarProperty Name="constellationID" ColumnName="constellationID" />
+            <ScalarProperty Name="regionID" ColumnName="regionID" />
+            <ScalarProperty Name="stationName" ColumnName="stationName" />
+            <ScalarProperty Name="x" ColumnName="x" />
+            <ScalarProperty Name="y" ColumnName="y" />
+            <ScalarProperty Name="z" ColumnName="z" />
+            <ScalarProperty Name="reprocessingEfficiency" ColumnName="reprocessingEfficiency" />
+            <ScalarProperty Name="reprocessingStationsTake" ColumnName="reprocessingStationsTake" />
+            <ScalarProperty Name="reprocessingHangarFlag" ColumnName="reprocessingHangarFlag" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="staStationTypes"><EntityTypeMapping TypeName="EveOnlineDBModel.staStationType"><MappingFragment StoreEntitySet="staStationTypes">
+            <ScalarProperty Name="stationTypeID" ColumnName="stationTypeID" />
+            <ScalarProperty Name="dockEntryX" ColumnName="dockEntryX" />
+            <ScalarProperty Name="dockEntryY" ColumnName="dockEntryY" />
+            <ScalarProperty Name="dockEntryZ" ColumnName="dockEntryZ" />
+            <ScalarProperty Name="dockOrientationX" ColumnName="dockOrientationX" />
+            <ScalarProperty Name="dockOrientationY" ColumnName="dockOrientationY" />
+            <ScalarProperty Name="dockOrientationZ" ColumnName="dockOrientationZ" />
+            <ScalarProperty Name="operationID" ColumnName="operationID" />
+            <ScalarProperty Name="officeSlots" ColumnName="officeSlots" />
+            <ScalarProperty Name="reprocessingEfficiency" ColumnName="reprocessingEfficiency" />
+            <ScalarProperty Name="conquerable" ColumnName="conquerable" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="translationTables"><EntityTypeMapping TypeName="EveOnlineDBModel.translationTable"><MappingFragment StoreEntitySet="translationTables">
+            <ScalarProperty Name="sourceTable" ColumnName="sourceTable" />
+            <ScalarProperty Name="destinationTable" ColumnName="destinationTable" />
+            <ScalarProperty Name="translatedKey" ColumnName="translatedKey" />
+            <ScalarProperty Name="tcGroupID" ColumnName="tcGroupID" />
+            <ScalarProperty Name="tcID" ColumnName="tcID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="trnTranslationColumns"><EntityTypeMapping TypeName="EveOnlineDBModel.trnTranslationColumn"><MappingFragment StoreEntitySet="trnTranslationColumns">
+            <ScalarProperty Name="tcGroupID" ColumnName="tcGroupID" />
+            <ScalarProperty Name="tcID" ColumnName="tcID" />
+            <ScalarProperty Name="tableName" ColumnName="tableName" />
+            <ScalarProperty Name="columnName" ColumnName="columnName" />
+            <ScalarProperty Name="masterID" ColumnName="masterID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="trnTranslationLanguages"><EntityTypeMapping TypeName="EveOnlineDBModel.trnTranslationLanguage"><MappingFragment StoreEntitySet="trnTranslationLanguages">
+            <ScalarProperty Name="numericLanguageID" ColumnName="numericLanguageID" />
+            <ScalarProperty Name="languageID" ColumnName="languageID" />
+            <ScalarProperty Name="languageName" ColumnName="languageName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="trnTranslations"><EntityTypeMapping TypeName="EveOnlineDBModel.trnTranslation"><MappingFragment StoreEntitySet="trnTranslations">
+            <ScalarProperty Name="tcID" ColumnName="tcID" />
+            <ScalarProperty Name="keyID" ColumnName="keyID" />
+            <ScalarProperty Name="languageID" ColumnName="languageID" />
+            <ScalarProperty Name="text" ColumnName="text" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="warCombatZones"><EntityTypeMapping TypeName="EveOnlineDBModel.warCombatZone"><MappingFragment StoreEntitySet="warCombatZones">
+            <ScalarProperty Name="combatZoneID" ColumnName="combatZoneID" />
+            <ScalarProperty Name="combatZoneName" ColumnName="combatZoneName" />
+            <ScalarProperty Name="factionID" ColumnName="factionID" />
+            <ScalarProperty Name="centerSystemID" ColumnName="centerSystemID" />
+            <ScalarProperty Name="description" ColumnName="description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="warCombatZoneSystems"><EntityTypeMapping TypeName="EveOnlineDBModel.warCombatZoneSystem"><MappingFragment StoreEntitySet="warCombatZoneSystems">
+            <ScalarProperty Name="solarSystemID" ColumnName="solarSystemID" />
+            <ScalarProperty Name="combatZoneID" ColumnName="combatZoneID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="EveDB">
+        <EntityTypeShape EntityType="EveOnlineDBModel.agtAgent" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.agtAgentType" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4033821614583335" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.agtResearchAgent" Width="1.5" PointX="2.75" PointY="3.75" Height="1.4033821614583322" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.chrAncestry" Width="1.5" PointX="4.75" PointY="0.75" Height="3.1340950520833335" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.chrAttribute" Width="1.5" PointX="4.75" PointY="4.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.chrBloodline" Width="1.5" PointX="6.75" PointY="0.75" Height="4.2879036458333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.chrFaction" Width="1.5" PointX="0.75" PointY="6.75" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.chrRace" Width="1.5" PointX="6.75" PointY="6.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crpActivity" Width="1.5" PointX="2.75" PointY="7.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crpNPCCorporationDivision" Width="1.5" PointX="8.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crpNPCCorporationResearchField" Width="1.5" PointX="8.75" PointY="3.75" Height="1.4033821614583353" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crpNPCCorporation" Width="1.5" PointX="8.75" PointY="6.75" Height="6.4032194010416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crpNPCCorporationTrade" Width="1.5" PointX="4.75" PointY="9.75" Height="1.4033821614583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crpNPCDivision" Width="1.5" PointX="10.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crtCategory" Width="1.5" PointX="0.75" PointY="10.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crtCertificate" Width="1.5" PointX="10.75" PointY="3.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crtClass" Width="1.5" PointX="10.75" PointY="7.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crtRecommendation" Width="1.5" PointX="10.75" PointY="10.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.crtRelationship" Width="1.5" PointX="12.75" PointY="0.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.dgmAttributeCategory" Width="1.5" PointX="2.75" PointY="12.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.dgmAttributeType" Width="1.5" PointX="12.75" PointY="3.75" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.dgmEffect" Width="1.5" PointX="4.75" PointY="12.75" Height="6.2109179687500067" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.dgmTypeAttribute" Width="1.5" PointX="12.75" PointY="7.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.dgmTypeEffect" Width="1.5" PointX="12.75" PointY="10.75" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.eveGraphic" Width="1.5" PointX="10.75" PointY="13.75" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.eveIcon" Width="1.5" PointX="12.75" PointY="13.75" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.eveUnit" Width="1.5" PointX="14.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invBlueprintType" Width="1.5" PointX="14.75" PointY="3.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invCategory" Width="1.5" PointX="6.75" PointY="14.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invContrabandType" Width="1.5" PointX="14.75" PointY="8.75" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invControlTowerResourcePurpos" Width="1.5" PointX="14.75" PointY="11.75" Height="1.4033821614583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invControlTowerResource" Width="1.5" PointX="14.75" PointY="14.75" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invFlag" Width="1.5" PointX="0.75" PointY="15.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invGroup" Width="1.5" PointX="16.75" PointY="0.75" Height="3.3263964843750102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invItem" Width="1.5" PointX="16.75" PointY="5.75" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invMarketGroup" Width="1.5" PointX="16.75" PointY="8.75" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invMetaGroup" Width="1.5" PointX="16.75" PointY="11.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invMetaType" Width="1.5" PointX="16.75" PointY="14.75" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invName" Width="1.5" PointX="6.75" PointY="17.75" Height="1.4033821614583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invPosition" Width="1.5" PointX="8.75" PointY="17.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invTypeMaterial" Width="1.5" PointX="10.75" PointY="17.75" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invTypeReaction" Width="1.5" PointX="12.75" PointY="17.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invType" Width="1.5" PointX="14.75" PointY="17.75" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.invUniqueName" Width="1.5" PointX="16.75" PointY="17.75" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapCelestialStatistic" Width="1.5" PointX="18.75" PointY="0.75" Height="4.8648079427083246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapConstellationJump" Width="1.5" PointX="0.75" PointY="18.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapConstellation" Width="1.5" PointX="18.75" PointY="6.75" Height="3.7109993489583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapDenormalize" Width="1.5" PointX="18.75" PointY="11.75" Height="3.9033007812499818" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapJump" Width="1.5" PointX="18.75" PointY="16.75" Height="1.4033821614583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapLandmark" Width="1.5" PointX="2.75" PointY="19.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapLocationScene" Width="1.5" PointX="18.75" PointY="19.75" Height="1.4033821614583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapLocationWormholeClass" Width="1.5" PointX="20.75" PointY="0.75" Height="1.4033821614583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapRegionJump" Width="1.5" PointX="20.75" PointY="3.75" Height="1.4033821614583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapRegion" Width="1.5" PointX="4.75" PointY="20.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapSolarSystemJump" Width="1.5" PointX="20.75" PointY="6.75" Height="2.1725878906249818" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapSolarSystem" Width="1.5" PointX="20.75" PointY="9.75" Height="6.0186165364583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.mapUniverse" Width="1.5" PointX="10.75" PointY="20.75" Height="3.3263964843749818" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.planetSchematic" Width="1.5" PointX="20.75" PointY="16.75" Height="1.5956835937499818" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.planetSchematicsPinMap" Width="1.5" PointX="20.75" PointY="19.75" Height="1.4033821614583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.planetSchematicsTypeMap" Width="1.5" PointX="6.75" PointY="21.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.ramActivity" Width="1.5" PointX="22.75" PointY="0.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.ramAssemblyLine" Width="1.5" PointX="22.75" PointY="3.75" Height="4.2879036458333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.ramAssemblyLineStation" Width="1.5" PointX="22.75" PointY="9.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.ramAssemblyLineTypeDetailPerCategory" Width="1.5" PointX="12.75" PointY="22.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.ramAssemblyLineTypeDetailPerGroup" Width="1.5" PointX="22.75" PointY="13.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.ramAssemblyLineType" Width="1.5" PointX="14.75" PointY="22.75" Height="2.5571907552083246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.ramInstallationTypeContent" Width="1.5" PointX="22.75" PointY="16.75" Height="1.5956835937499818" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.ramTypeRequirement" Width="1.5" PointX="16.75" PointY="22.75" Height="2.1725878906249818" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.staOperation" Width="1.5" PointX="18.75" PointY="22.75" Height="3.7109993489583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.staOperationService" Width="1.5" PointX="22.75" PointY="19.75" Height="1.4033821614583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.staService" Width="1.5" PointX="20.75" PointY="22.75" Height="1.5956835937499818" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.staStation" Width="1.5" PointX="22.75" PointY="22.75" Height="4.4802050781249818" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.staStationType" Width="1.5" PointX="0.75" PointY="23.75" Height="3.1340950520833246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.translationTable" Width="1.5" PointX="24.75" PointY="0.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.trnTranslationColumn" Width="1.5" PointX="24.75" PointY="3.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.trnTranslationLanguage" Width="1.5" PointX="24.75" PointY="6.75" Height="1.5956835937499818" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.trnTranslation" Width="1.5" PointX="6.75" PointY="24.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.warCombatZone" Width="1.5" PointX="24.75" PointY="9.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="EveOnlineDBModel.warCombatZoneSystem" Width="1.5" PointX="24.75" PointY="12.75" Height="1.4033821614583246" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
