@@ -36,11 +36,11 @@ namespace WebEve.Controllers
             return RedirectToAction("Index");
         }
 
-        public void ReprocessProfit() {
+        public JsonResult ReprocessProfit(int itemId, int refiningLevel, int refineryEfficiencyLevel, int scrapProcessingLevel, double standing, int accountingLevel) {
             IMarketPriceRepository priceRepository = new EveCentralRepository();
             SolarSystem system = db.SolarSystems.Single(s => s.Name.Equals("Jita"));
-            Item item = new Item();
-            double buildPrice = 0;
+            Item item = db.Items.Find(itemId);
+            double reprocessPrice = 0;
             foreach(invTypeMaterial material in EveContext.invTypeMaterials.Where(m => m.typeID == Int32.Parse(item.ApiId))) 
             {
                 Item requiredItem = db.Items.SingleOrDefault(i => i.ApiId == material.materialTypeID.ToString());
@@ -55,12 +55,11 @@ namespace WebEve.Controllers
                     db.Prices.Add(p);
                     db.SaveChanges();
                 }
-                buildPrice += requiredItem.LatestPrice(system).Buy * material.quantity;
+                // There's a tax when selling an item but not when buying one (only if not in advanced mode)
+                reprocessPrice += double.Parse(String.Format("{0:0.00}", (requiredItem.LatestPrice(system).Buy * Utils.ReprocessTax(material.quantity, refiningLevel, refineryEfficiencyLevel, scrapProcessingLevel, standing)) * Utils.SaleTax(accountingLevel)));
             }
-            if (buildPrice > item.LatestPrice(system).Sell)
-            { 
-                // Profit !!!
-            }
+            double profit = reprocessPrice - item.LatestPrice(system).Sell;
+            return Json(profit, JsonRequestBehavior.AllowGet);
         }
 
     }
