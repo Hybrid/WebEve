@@ -5,14 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
 <form id="updateForm" action="/Price/Update" method="post">
     <label> Pick System : </label>
     @Html.DropDownList("SolarSystemID", Model.Systems as SelectList);
     <br />
     <label> Price Mode (EveHQ) : </label>
-    @Html.DropDownList("PriceMode", Model.PriceModes as SelectList);
+    @Html.DropDownList("PriceMode", WebEve.Utils.PriceModeSelect() as SelectList);
     <input type="submit" value="Update" /> 
 </form>
     @Html.ActionLink("Update", "Update")

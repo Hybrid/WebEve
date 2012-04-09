@@ -26,5 +26,10 @@ namespace WebEve
             IList<string> modes = new List<String>{ Price.BUY, Price.SELL };
             return new SelectList(modes); 
         }
+        public static SelectList SkillLevelSelect()
+        {
+            IList<int> modes = new List<int> { 0, 1, 2, 3, 4, 5 };
+            return new SelectList(modes);
+        }
     }
 }

@@ -1,0 +1,33 @@
+﻿@model WebEve.ViewModels.ReprocessorViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="/Reprocessor/ProfitAnalysis/" method="post">
+    <label> Pick a system </label>
+    @Html.DropDownList("solarSystemID", Model.Systems as SelectList)
+    <br />
+    <label> Refining Skill</label>
+    @Html.DropDownList("refiningLevel", WebEve.Utils.SkillLevelSelect() as SelectList)
+    <br />
+    <label> Refinery Efficiency Skill</label>
+    @Html.DropDownList("refineryEfficiencyLevel", WebEve.Utils.SkillLevelSelect() as SelectList)
+    <br />
+    <label> Scrap Processing Skill</label>
+    @Html.DropDownList("scrapProcessingLevel", WebEve.Utils.SkillLevelSelect() as SelectList)
+    <br />
+    <label> Accounting Skill</label>
+    @Html.DropDownList("accountingLevel", WebEve.Utils.SkillLevelSelect() as SelectList)
+    <br />
+    <label> Standing </label>
+    @Html.TextBox("standing", 0)
+    <br />
+    <label> Item Buy Mode (Buy / Sell Orders)</label>
+    @Html.DropDownList("buyMode", WebEve.Utils.PriceModeSelect() as SelectList)
+    <br />
+    <label> Materials Sell Mode (Buy / Sell Orders</label>
+    @Html.DropDownList("sellMode", WebEve.Utils.PriceModeSelect() as SelectList)
+    <input type="submit" value="Calculate Profit" />
+</form>

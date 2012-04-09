@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebEve.ViewModels.ProfitViewModel>
+@{
+    ViewBag.Title = "ProfitAnalysis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    ProfitAnalysis</h2>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Item Name
+            </th>
+            <th>
+                Profit per item (ISK)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var it in Model)
+        {
+            <tr>
+                <td> @it.Item.Name </td>
+                <td> @it.Profit </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -69,6 +69,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\PriceController.cs" />
+    <Compile Include="Controllers\ReprocessorController.cs" />
     <Compile Include="Controllers\SolarSystemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -403,6 +404,8 @@
     <Compile Include="Repositories\IMarketPriceRepository.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="ViewModels\PriceViewModel.cs" />
+    <Compile Include="ViewModels\ProfitViewModel.cs" />
+    <Compile Include="ViewModels\ReprocessorViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -529,6 +532,8 @@
     </None>
     <Content Include="Views\Shared\PriceTableTemplate.cshtml" />
     <Content Include="Views\Shared\SolarSystemTableTemplate.cshtml" />
+    <Content Include="Views\Reprocessor\Index.cshtml" />
+    <Content Include="Views\Reprocessor\ProfitAnalysis.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
