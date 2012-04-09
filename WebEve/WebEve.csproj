@@ -507,14 +507,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EveOnlineModel.cs</LastGenOutput>
     </None>
-    <None Include="Models\WebEveModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>WebEveModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="Models\WebEveModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>WebEveModel.cs</LastGenOutput>
-    </None>
     <Content Include="Views\Item\Delete.cshtml" />
     <Content Include="Views\Item\Edit.cshtml" />
     <Content Include="Views\Item\Index.cshtml" />
@@ -525,6 +517,14 @@
     <Content Include="Views\SolarSystem\Edit.cshtml" />
     <Content Include="Views\SolarSystem\Index.cshtml" />
     <Content Include="Views\Shared\ItemTableTemplate.cshtml" />
+    <None Include="Models\WebEveModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WebEveModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Models\WebEveModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WebEveModel.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

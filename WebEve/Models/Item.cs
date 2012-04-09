@@ -11,7 +11,7 @@ namespace WebEve.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
+    
     public partial class Item
     {
         public Item()

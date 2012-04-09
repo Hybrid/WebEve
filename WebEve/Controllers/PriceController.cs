@@ -61,7 +61,7 @@ namespace WebEve.Controllers
 
                 reprocessPrice += double.Parse(String.Format("{0:0.00}", (requiredItem.LatestPrice(system).Buy * Utils.ReprocessTax(material.quantity, refiningLevel, refineryEfficiencyLevel, scrapProcessingLevel, standing)) * (1 - Utils.SaleTax(accountingLevel))));
             }
-            double profit = reprocessPrice - item.LatestPrice(system).Sell;
+            double profit = reprocessPrice - item.LatestPrice(system).Buy;
             return Json(profit, JsonRequestBehavior.AllowGet);
         }
     }
