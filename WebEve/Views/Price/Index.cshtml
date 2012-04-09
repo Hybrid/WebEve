@@ -1,40 +1,48 @@
 ﻿@model WebEve.ViewModels.PriceViewModel
-
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <form id="updateForm" action="/Price/Update" method="post">
-    <label> Pick System : </label>
-    @Html.DropDownList("SolarSystemID", Model.Systems as SelectList);
-    <br />
-    <label> Price Mode (EveHQ) : </label>
-    @Html.DropDownList("PriceMode", WebEve.Utils.PriceModeSelect() as SelectList);
-    <input type="submit" value="Update" /> 
+<label>
+    Pick System :
+</label>
+@Html.DropDownList("SolarSystemID", Model.Systems as SelectList);
+<br />
+<label>
+    Price Mode (EveHQ) :
+</label>
+@Html.DropDownList("PriceMode", WebEve.Utils.PriceModeSelect() as SelectList);
+<input type="submit" value="Update" />
 </form>
-    @Html.ActionLink("Update", "Update")
+@Html.ActionLink("Update", "Update")
 <table>
-    <tr>
-        <th>
-            Item
-        </th>
-        <th>
-            Date
-        </th>
-        <th>
-            Sell
-        </th>
-        <th>
-            Buy
-        </th>
-        <th>
-            Solar System
-        </th>
-    </tr>
-
-@foreach (var item in Model.Items) {
-    {Html.RenderPartial("PriceTableTemplate", item.LatestPrice());}
-}
-
+    <thead>
+        <tr>
+            <th>
+                Item
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Sell
+            </th>
+            <th>
+                Buy
+            </th>
+            <th>
+                Solar System
+            </th>
+            <th>
+                Eve Central
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            { Html.RenderPartial("PriceTableTemplate", item.LatestPrice()); }
+        }
+    </tbody>
 </table>
