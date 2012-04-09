@@ -24,9 +24,5 @@ namespace WebEve.Models
         public string Name { get; set; }
     
         public virtual ICollection<Price> Prices { get; set; }
-        public Price LatestPrice(SolarSystem system) 
-        {
-            return Prices.Where(p => p.SolarSystemId == system.Id).OrderByDescending(p => p.Date).First();
-        }
     }
 }
