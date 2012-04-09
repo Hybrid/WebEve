@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebEve.Models.Price>
+﻿@model WebEve.ViewModels.PriceViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -7,9 +7,15 @@
 
 <h2>Index</h2>
 
-<p>
+<form id="updateForm" action="/Price/Update" method="post">
+    <label> Pick System : </label>
+    @Html.DropDownList("SolarSystemID", Model.Systems as SelectList);
+    <br />
+    <label> Price Mode (EveHQ) : </label>
+    @Html.DropDownList("PriceMode", Model.PriceModes as SelectList);
+    <input type="submit" value="Update" /> 
+</form>
     @Html.ActionLink("Update", "Update")
-</p>
 <table>
     <tr>
         <th>
@@ -29,24 +35,8 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sell)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Buy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SolarSystem.Name)
-        </td>
-    </tr>
+@foreach (var item in Model.Items) {
+    {Html.RenderPartial("PriceTableTemplate", item.LatestPrice());}
 }
 
 </table>

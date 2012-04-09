@@ -36,7 +36,7 @@ namespace WebEve.Controllers
             Price p = priceRepository.FetchPrice(item, db.SolarSystems.Single(s => s.Name.Equals("Jita")));
             db.Prices.Add(p);
             db.SaveChanges();
-            eveHQDB.UpdatePrice(p);
+            eveHQDB.UpdatePrice(p, Price.SELL);
             eveHQDB.SaveChanges();
             return PartialView("ItemTableTemplate", item);
         }

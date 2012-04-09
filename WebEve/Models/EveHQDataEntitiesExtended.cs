@@ -8,7 +8,7 @@ namespace WebEve.Models
 {
     public partial class EveHQDataEntities : DbContext
     {
-        public void UpdatePrice(Price price)
+        public void UpdatePrice(Price price, string PriceMode)
         {
             int id = Int32.Parse(price.Item.ApiId);
             customPrice customPrice = customPrices.SingleOrDefault(cp => cp.typeID == id);
@@ -16,13 +16,13 @@ namespace WebEve.Models
             {
                 customPrice = new customPrice();
                 customPrice.typeID = Int32.Parse(price.Item.ApiId);
-                customPrice.price = price.Sell;
+                customPrice.price = price.GetPrice(PriceMode);
                 customPrice.priceDate = price.Date;
                 this.customPrices.Add(customPrice);
             }
             else
             {
-                customPrice.price = price.Sell;
+                customPrice.price = price.GetPrice(PriceMode);
                 customPrice.priceDate = price.Date;
             }
         }

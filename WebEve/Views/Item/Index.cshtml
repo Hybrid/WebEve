@@ -12,9 +12,6 @@
     <input type='button' onclick='AddItem()' value='Add'/>
     <input type='hidden' id='itemId' />
 </p>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table>
     <thead>
         <tr>
@@ -28,21 +25,10 @@
         </tr>
     </thead>
 <tbody id="ItemList">
-    @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ApiId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id }) |
-            <a href='#' onclick="AnalyzeReprocess(@item.Id)"> Reprocess </a>
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        { Html.RenderPartial("ItemTableTemplate", item); }
+    }
 </tbody>
 
 

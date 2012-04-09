@@ -1,0 +1,13 @@
+﻿@model WebEve.Models.SolarSystem
+<tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ApiId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+        </td>
+    </tr>

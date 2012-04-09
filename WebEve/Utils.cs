@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
+using WebEve.Models;
 
 namespace WebEve
 {
@@ -18,6 +20,11 @@ namespace WebEve
         public static double SaleTax(int accountingLevel) 
         {
             return (1 - (accountingLevel * 0.10)) / 100; 
+        }
+
+        public static SelectList PriceModeSelect() {
+            IList<string> modes = new List<String>{ Price.BUY, Price.SELL };
+            return new SelectList(modes); 
         }
     }
 }

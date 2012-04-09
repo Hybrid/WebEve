@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using WebEve.Models;
 using System.Xml.Linq;
 using WebEve.Repositories;
+using WebEve.ViewModels;
 namespace WebEve.Controllers
 {
     public class PriceController : Controller
@@ -20,16 +21,21 @@ namespace WebEve.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Prices.Where(p => p.Date == DateTime.Today));
+            PriceViewModel vm = new PriceViewModel
+            {
+                Items = db.Items.OrderBy(x => x.Name) as IQueryable<Item>,
+                Systems = new SelectList(db.SolarSystems.OrderBy(x => x.Name), "Id", "Name", db.SolarSystems.Single(x => x.Name.Equals("Jita")).Id)
+            };
+            return View(vm);
         }
-        public ActionResult Update() 
+        public ActionResult Update(int SolarSystemID, string PriceMode) 
         {
-            SolarSystem system = db.SolarSystems.Single(s => s.Name.Equals("Jita"));
+            SolarSystem system = db.SolarSystems.Find(SolarSystemID);
             IMarketPriceRepository priceRepository = new EveCentralRepository();
             IEnumerable<Price> prices = priceRepository.FetchPrices(db.Items, system);
             foreach (Price p in prices) {
                 db.Prices.Add(p);
-                eveHQDB.UpdatePrice(p);
+                eveHQDB.UpdatePrice(p, PriceMode);
             }
             eveHQDB.SaveChanges();
             db.SaveChanges();
