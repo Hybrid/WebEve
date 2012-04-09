@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Xml.Linq;
@@ -18,8 +19,8 @@ namespace WebEve.Repositories
             {
                 Item = item,
                 SolarSystem = system,
-                Buy = Double.Parse(itemElement.Element("buy").Element("max").Value),
-                Sell = Double.Parse(itemElement.Element("sell").Element("min").Value),
+                Buy = Double.Parse(itemElement.Element("buy").Element("max").Value, CultureInfo.InvariantCulture),
+                Sell = Double.Parse(itemElement.Element("sell").Element("min").Value, CultureInfo.InvariantCulture),
                 Date = DateTime.Today
             };
             return price;
@@ -45,8 +46,8 @@ namespace WebEve.Repositories
                 {
                     Item = currentItem,
                     SolarSystem = system,
-                    Buy = Double.Parse(itemElement.Element("buy").Element("max").Value),
-                    Sell = Double.Parse(itemElement.Element("sell").Element("min").Value),
+                    Buy = Double.Parse(itemElement.Element("buy").Element("max").Value, CultureInfo.InvariantCulture),
+                    Sell = Double.Parse(itemElement.Element("sell").Element("min").Value, CultureInfo.InvariantCulture),
                     Date = DateTime.Today
                 };
                 prices.Add(price);
