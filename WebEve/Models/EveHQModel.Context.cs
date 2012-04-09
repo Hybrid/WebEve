@@ -26,7 +26,7 @@ namespace WebEve.Models
             throw new UnintentionalCodeFirstException();
         }
 
-        public void UpdatePrice(Price price)
+        /*public void UpdatePrice(Price price)
         {
             int id = Int32.Parse(price.Item.ApiId);
             customPrice customPrice = customPrices.SingleOrDefault(cp => cp.typeID == id);
@@ -43,7 +43,7 @@ namespace WebEve.Models
                 customPrice.price = price.Sell;
                 customPrice.priceDate = price.Date;
             }
-        }
+        }*/
 
         public DbSet<assetItemName> assetItemNames { get; set; }
         public DbSet<customPrice> customPrices { get; set; }

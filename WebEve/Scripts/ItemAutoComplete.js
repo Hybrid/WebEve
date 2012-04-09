@@ -47,10 +47,10 @@ function AddItem() {
     $.ajax({
         type: 'POST',
         url: '/Item/AjaxCreate',
-        dataType: 'json',
+        dataType: 'html',
         data: 'ApiId=' + $("#itemId").val(),
         success: function (data) {
-            var html = "<tr> <td> " + data.ApiId + " </td> <td> " + data.Name + "</td> <td> <a href='/Item/Edit/" + data.Id + "'> Edit </a> | <a href='/Item/Delete/" + data.Id + "'> Edit </a> </td> </tr>";
+            var html = $(data) //"<tr> <td> " + data.ApiId + " </td> <td> " + data.Name + "</td> <td> <a href='/Item/Edit/" + data.Id + "'> Edit </a> | <a href='/Item/Delete/" + data.Id + "'> Edit </a> </td> </tr>";
             $("#ItemList").append(html);
             $("#itemId").val('');
             $("#ItemSearch").val('');

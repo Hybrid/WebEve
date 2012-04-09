@@ -165,6 +165,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EveHQ.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\EveHQDataEntitiesExtended.cs" />
     <Compile Include="Models\EveHQModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -513,9 +514,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>WebEveModel.cs</LastGenOutput>
     </None>
-    <Content Include="Views\Item\Create.cshtml" />
     <Content Include="Views\Item\Delete.cshtml" />
-    <Content Include="Views\Item\Details.cshtml" />
     <Content Include="Views\Item\Edit.cshtml" />
     <Content Include="Views\Item\Index.cshtml" />
     <Content Include="Views\Price\Index.cshtml" />
@@ -524,6 +523,7 @@
     <Content Include="Views\SolarSystem\Details.cshtml" />
     <Content Include="Views\SolarSystem\Edit.cshtml" />
     <Content Include="Views\SolarSystem\Index.cshtml" />
+    <Content Include="Views\Shared\ItemTableTemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

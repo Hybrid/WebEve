@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebEve.Models;
+using WebEve.Repositories;
 
 namespace WebEve.Controllers
 { 
@@ -13,6 +14,7 @@ namespace WebEve.Controllers
     {
         private WebEveEntities db = new WebEveEntities();
         private EveOnlineDBEntities EveContext = new EveOnlineDBEntities();
+        private EveHQDataEntities eveHQDB = new EveHQDataEntities();
 
         //
         // GET: /Item/
@@ -22,48 +24,21 @@ namespace WebEve.Controllers
             return View(db.Items.ToList());
         }
 
-        //
-        // GET: /Item/Details/5
-
-        public ViewResult Details(int id)
-        {
-            Item item = db.Items.Find(id);
-            return View(item);
-        }
-
-        //
-        // GET: /Item/Create
-
-        public ActionResult Create()
-        {
-            return View();
-        } 
-
-        //
-        // POST: /Item/Create
-
         [HttpPost]
-        public ActionResult Create(Item item)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Items.Add(item);
-                db.SaveChanges();
-                return RedirectToAction("Index");  
-            }
-
-            return View(item);
-        }
-        [HttpPost]
-        public JsonResult AjaxCreate(int ApiId) 
+        public PartialViewResult AjaxCreate(int ApiId) 
         {
             invType eveItem = EveContext.invTypes.SingleOrDefault(x => x.typeID == ApiId);
             Item item = new Item();
             item.Name = eveItem.typeName;
             item.ApiId = eveItem.typeID.ToString();
             db.Items.Add(item);
+            IMarketPriceRepository priceRepository = new EveCentralRepository();
+            Price p = priceRepository.FetchPrice(item, db.SolarSystems.Single(s => s.Name.Equals("Jita")));
+            db.Prices.Add(p);
             db.SaveChanges();
-            return Json(item, JsonRequestBehavior.AllowGet);
+            eveHQDB.UpdatePrice(p);
+            eveHQDB.SaveChanges();
+            return PartialView("ItemTableTemplate", item);
         }
         public JsonResult Search(string startswith) 
         {
