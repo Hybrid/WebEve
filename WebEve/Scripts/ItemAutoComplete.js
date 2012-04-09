@@ -57,3 +57,17 @@ function AddItem() {
         }
     });
 }
+function AnalyzeReprocess(id) {
+    $.ajax({
+        type: 'POST',
+        url: '/Price/ReprocessProfit',
+        dataType: 'json',
+        data: 'itemId=' + id + '&refiningLevel=' + 5 + '&refineryEfficiencyLevel=' + 4 + '&scrapProcessingLevel=' + 1 + '&standing=' + 8 + '&accountingLevel=' + 4,
+        error: function () {
+            console.log('error');
+        },
+        success: function (data) {
+            console.log(data);
+        }
+    });
+ }

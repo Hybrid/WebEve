@@ -28,7 +28,8 @@ namespace WebEve.Models
 
         public void UpdatePrice(Price price)
         {
-            customPrice customPrice = customPrices.SingleOrDefault(cp => cp.typeID == Int32.Parse(price.Item.ApiId));
+            int id = Int32.Parse(price.Item.ApiId);
+            customPrice customPrice = customPrices.SingleOrDefault(cp => cp.typeID == id);
             if (customPrice == null)
             {
                 customPrice = new customPrice();
