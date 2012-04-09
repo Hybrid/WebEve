@@ -258,6 +258,7 @@
     <Compile Include="Models\Item.cs">
       <DependentUpon>WebEveModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ItemExtended.cs" />
     <Compile Include="Models\mapCelestialStatistic.cs">
       <DependentUpon>EveOnlineModel.tt</DependentUpon>
     </Compile>
