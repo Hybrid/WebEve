@@ -163,16 +163,16 @@
     <edmx:ConceptualModels>
       <Schema Namespace="EveHQDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="EveHQDataEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="assetItemNames" EntityType="EveHQDataModel.assetItemName" />
-          <EntitySet Name="customPrices" EntityType="EveHQDataModel.customPrice" />
-          <EntitySet Name="eveIDToNames" EntityType="EveHQDataModel.eveIDToName" />
-          <EntitySet Name="eveMails" EntityType="EveHQDataModel.eveMail" />
-          <EntitySet Name="eveNotifications" EntityType="EveHQDataModel.eveNotification" />
-          <EntitySet Name="inventionResults" EntityType="EveHQDataModel.inventionResult" />
-          <EntitySet Name="marketPrices" EntityType="EveHQDataModel.marketPrice" />
-          <EntitySet Name="requisitions" EntityType="EveHQDataModel.requisition" />
-          <EntitySet Name="walletJournals" EntityType="EveHQDataModel.walletJournal" />
-          <EntitySet Name="walletTransactions" EntityType="EveHQDataModel.walletTransaction" />
+          <EntitySet Name="AssetItemNames" EntityType="EveHQDataModel.assetItemName" />
+          <EntitySet Name="CustomPrices" EntityType="EveHQDataModel.customPrice" />
+          <EntitySet Name="EveIDToNames" EntityType="EveHQDataModel.eveIDToName" />
+          <EntitySet Name="EveMails" EntityType="EveHQDataModel.eveMail" />
+          <EntitySet Name="EveNotifications" EntityType="EveHQDataModel.eveNotification" />
+          <EntitySet Name="InventionResults" EntityType="EveHQDataModel.inventionResult" />
+          <EntitySet Name="MarketPrices" EntityType="EveHQDataModel.marketPrice" />
+          <EntitySet Name="Requisitions" EntityType="EveHQDataModel.requisition" />
+          <EntitySet Name="WalletJournals" EntityType="EveHQDataModel.walletJournal" />
+          <EntitySet Name="WalletTransactions" EntityType="EveHQDataModel.walletTransaction" />
         </EntityContainer>
         <EntityType Name="assetItemName">
           <Key>
@@ -320,20 +320,20 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="EveHQDataModelStoreContainer" CdmEntityContainer="EveHQDataEntities">
-          <EntitySetMapping Name="assetItemNames"><EntityTypeMapping TypeName="EveHQDataModel.assetItemName"><MappingFragment StoreEntitySet="assetItemNames">
+          <EntitySetMapping Name="AssetItemNames"><EntityTypeMapping TypeName="EveHQDataModel.assetItemName"><MappingFragment StoreEntitySet="assetItemNames">
             <ScalarProperty Name="itemID" ColumnName="itemID" />
             <ScalarProperty Name="itemName" ColumnName="itemName" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="customPrices"><EntityTypeMapping TypeName="EveHQDataModel.customPrice"><MappingFragment StoreEntitySet="customPrices">
+          <EntitySetMapping Name="CustomPrices"><EntityTypeMapping TypeName="EveHQDataModel.customPrice"><MappingFragment StoreEntitySet="customPrices">
             <ScalarProperty Name="typeID" ColumnName="typeID" />
             <ScalarProperty Name="price" ColumnName="price" />
             <ScalarProperty Name="priceDate" ColumnName="priceDate" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="eveIDToNames"><EntityTypeMapping TypeName="EveHQDataModel.eveIDToName"><MappingFragment StoreEntitySet="eveIDToName">
+          <EntitySetMapping Name="EveIDToNames"><EntityTypeMapping TypeName="EveHQDataModel.eveIDToName"><MappingFragment StoreEntitySet="eveIDToName">
             <ScalarProperty Name="eveID" ColumnName="eveID" />
             <ScalarProperty Name="eveName" ColumnName="eveName" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="eveMails"><EntityTypeMapping TypeName="EveHQDataModel.eveMail"><MappingFragment StoreEntitySet="eveMail">
+          <EntitySetMapping Name="EveMails"><EntityTypeMapping TypeName="EveHQDataModel.eveMail"><MappingFragment StoreEntitySet="eveMail">
             <ScalarProperty Name="messageKey" ColumnName="messageKey" />
             <ScalarProperty Name="messageID" ColumnName="messageID" />
             <ScalarProperty Name="originatorID" ColumnName="originatorID" />
@@ -346,7 +346,7 @@
             <ScalarProperty Name="readMail" ColumnName="readMail" />
             <ScalarProperty Name="messageBody" ColumnName="messageBody" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="eveNotifications"><EntityTypeMapping TypeName="EveHQDataModel.eveNotification"><MappingFragment StoreEntitySet="eveNotifications">
+          <EntitySetMapping Name="EveNotifications"><EntityTypeMapping TypeName="EveHQDataModel.eveNotification"><MappingFragment StoreEntitySet="eveNotifications">
             <ScalarProperty Name="messageKey" ColumnName="messageKey" />
             <ScalarProperty Name="messageID" ColumnName="messageID" />
             <ScalarProperty Name="typeID" ColumnName="typeID" />
@@ -356,7 +356,7 @@
             <ScalarProperty Name="readMail" ColumnName="readMail" />
             <ScalarProperty Name="messageBody" ColumnName="messageBody" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="inventionResults"><EntityTypeMapping TypeName="EveHQDataModel.inventionResult"><MappingFragment StoreEntitySet="inventionResults">
+          <EntitySetMapping Name="InventionResults"><EntityTypeMapping TypeName="EveHQDataModel.inventionResult"><MappingFragment StoreEntitySet="inventionResults">
             <ScalarProperty Name="resultID" ColumnName="resultID" />
             <ScalarProperty Name="jobID" ColumnName="jobID" />
             <ScalarProperty Name="resultDate" ColumnName="resultDate" />
@@ -367,12 +367,12 @@
             <ScalarProperty Name="installerName" ColumnName="installerName" />
             <ScalarProperty Name="result" ColumnName="result" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="marketPrices"><EntityTypeMapping TypeName="EveHQDataModel.marketPrice"><MappingFragment StoreEntitySet="marketPrices">
+          <EntitySetMapping Name="MarketPrices"><EntityTypeMapping TypeName="EveHQDataModel.marketPrice"><MappingFragment StoreEntitySet="marketPrices">
             <ScalarProperty Name="typeID" ColumnName="typeID" />
             <ScalarProperty Name="price" ColumnName="price" />
             <ScalarProperty Name="priceDate" ColumnName="priceDate" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="requisitions"><EntityTypeMapping TypeName="EveHQDataModel.requisition"><MappingFragment StoreEntitySet="requisitions">
+          <EntitySetMapping Name="Requisitions"><EntityTypeMapping TypeName="EveHQDataModel.requisition"><MappingFragment StoreEntitySet="requisitions">
             <ScalarProperty Name="orderID" ColumnName="orderID" />
             <ScalarProperty Name="itemID" ColumnName="itemID" />
             <ScalarProperty Name="itemName" ColumnName="itemName" />
@@ -382,7 +382,7 @@
             <ScalarProperty Name="requestDate" ColumnName="requestDate" />
             <ScalarProperty Name="requisition1" ColumnName="requisition" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="walletJournals"><EntityTypeMapping TypeName="EveHQDataModel.walletJournal"><MappingFragment StoreEntitySet="walletJournal">
+          <EntitySetMapping Name="WalletJournals"><EntityTypeMapping TypeName="EveHQDataModel.walletJournal"><MappingFragment StoreEntitySet="walletJournal">
             <ScalarProperty Name="transID" ColumnName="transID" />
             <ScalarProperty Name="transDate" ColumnName="transDate" />
             <ScalarProperty Name="transRef" ColumnName="transRef" />
@@ -404,7 +404,7 @@
             <ScalarProperty Name="walletID" ColumnName="walletID" />
             <ScalarProperty Name="importDate" ColumnName="importDate" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="walletTransactions"><EntityTypeMapping TypeName="EveHQDataModel.walletTransaction"><MappingFragment StoreEntitySet="walletTransactions">
+          <EntitySetMapping Name="WalletTransactions"><EntityTypeMapping TypeName="EveHQDataModel.walletTransaction"><MappingFragment StoreEntitySet="walletTransactions">
             <ScalarProperty Name="transID" ColumnName="transID" />
             <ScalarProperty Name="transDate" ColumnName="transDate" />
             <ScalarProperty Name="transRef" ColumnName="transRef" />

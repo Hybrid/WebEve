@@ -11,14 +11,14 @@ namespace WebEve.Models
         public void UpdatePrice(Price price, string PriceMode)
         {
             int id = Int32.Parse(price.Item.ApiId);
-            customPrice customPrice = customPrices.SingleOrDefault(cp => cp.typeID == id);
+            customPrice customPrice = this.CustomPrices.SingleOrDefault(cp => cp.typeID == id);
             if (customPrice == null)
             {
                 customPrice = new customPrice();
                 customPrice.typeID = Int32.Parse(price.Item.ApiId);
                 customPrice.price = price.GetPrice(PriceMode);
                 customPrice.priceDate = price.Date;
-                this.customPrices.Add(customPrice);
+                this.CustomPrices.Add(customPrice);
             }
             else
             {

@@ -12,7 +12,6 @@ namespace WebEve.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Linq;
     
     public partial class EveHQDataEntities : DbContext
     {
@@ -25,16 +24,16 @@ namespace WebEve.Models
         {
             throw new UnintentionalCodeFirstException();
         }
-
-        public DbSet<assetItemName> assetItemNames { get; set; }
-        public DbSet<customPrice> customPrices { get; set; }
-        public DbSet<eveIDToName> eveIDToNames { get; set; }
-        public DbSet<eveMail> eveMails { get; set; }
-        public DbSet<eveNotification> eveNotifications { get; set; }
-        public DbSet<inventionResult> inventionResults { get; set; }
-        public DbSet<marketPrice> marketPrices { get; set; }
-        public DbSet<requisition> requisitions { get; set; }
-        public DbSet<walletJournal> walletJournals { get; set; }
-        public DbSet<walletTransaction> walletTransactions { get; set; }
+    
+        public DbSet<assetItemName> AssetItemNames { get; set; }
+        public DbSet<customPrice> CustomPrices { get; set; }
+        public DbSet<eveIDToName> EveIDToNames { get; set; }
+        public DbSet<eveMail> EveMails { get; set; }
+        public DbSet<eveNotification> EveNotifications { get; set; }
+        public DbSet<inventionResult> InventionResults { get; set; }
+        public DbSet<marketPrice> MarketPrices { get; set; }
+        public DbSet<requisition> Requisitions { get; set; }
+        public DbSet<walletJournal> WalletJournals { get; set; }
+        public DbSet<walletTransaction> WalletTransactions { get; set; }
     }
 }
