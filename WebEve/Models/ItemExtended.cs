@@ -9,8 +9,12 @@ namespace WebEve.Models
     {
         public Price LatestPrice()
         {
-            return Prices.OrderByDescending(p => p.Date).First();
+            return Prices.OrderByDescending(p => p.Date).FirstOrDefault() ?? new Price {
+                ItemId = this.Id,
+                Item = this
+            };
         }
+
         public Price LatestPrice(SolarSystem system)
         {
             return Prices.Where(p => p.SolarSystemId == system.Id).OrderByDescending(p => p.Date).First();
